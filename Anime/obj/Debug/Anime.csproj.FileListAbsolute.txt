@@ -10,3 +10,15 @@ D:\Буренин Кирилл\справочник\Anime\Anime\obj\Debug\Anime.
 D:\Буренин Кирилл\справочник\Anime\Anime\obj\Debug\Anime.exe
 D:\Буренин Кирилл\справочник\Anime\Anime\obj\Debug\Anime.pdb
 D:\Буренин Кирилл\справочник\Anime\Anime\obj\Debug\Anime.Characters.resources
+D:\Буренин Кирилл\справочник1\Anime\bin\Debug\Anime.exe.config
+D:\Буренин Кирилл\справочник1\Anime\bin\Debug\Anime.exe
+D:\Буренин Кирилл\справочник1\Anime\bin\Debug\Anime.pdb
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.csproj.AssemblyReference.cache
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.csproj.SuggestedBindingRedirects.cache
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.Characters.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.MainForm.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.Properties.Resources.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.csproj.GenerateResource.cache
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.csproj.CoreCompileInputs.cache
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.exe
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.pdb
