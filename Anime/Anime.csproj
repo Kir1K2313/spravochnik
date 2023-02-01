@@ -52,6 +52,12 @@
     <Compile Include="Characters.Designer.cs">
       <DependentUpon>Characters.cs</DependentUpon>
     </Compile>
+    <Compile Include="filterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="filterForm.Designer.cs">
+      <DependentUpon>filterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Characters.resx">
       <DependentUpon>Characters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="filterForm.resx">
+      <DependentUpon>filterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

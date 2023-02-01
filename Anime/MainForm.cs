@@ -23,5 +23,11 @@ namespace Anime
             Characters characters = new Characters(btn.Text);
             characters.Show();
         }
+
+        private void filterbutton_Click(object sender, EventArgs e)
+        {
+            filterForm filter = new filterForm();
+            filter.ShowDialog();
+        }
     }
 }
