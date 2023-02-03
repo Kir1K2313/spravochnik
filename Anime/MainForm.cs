@@ -17,7 +17,7 @@ namespace Anime
             InitializeComponent();
         }
 
-        private void button_Click(object sender, EventArgs e)
+        public void button_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             Characters characters = new Characters(btn.Text);

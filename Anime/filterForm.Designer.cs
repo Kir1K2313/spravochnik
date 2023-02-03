@@ -40,7 +40,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rasaCombobox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.NameCombobox = new System.Windows.Forms.ComboBox();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
+            this.mirComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -49,7 +53,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(56, 174);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 216);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 152);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -59,17 +63,18 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(56, 347);
+            this.button1.Location = new System.Drawing.Point(41, 389);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 52);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ичиго Куросаки";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(290, 174);
+            this.pictureBox3.Location = new System.Drawing.Point(275, 216);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(221, 152);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,17 +84,18 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(290, 347);
+            this.button3.Location = new System.Drawing.Point(275, 389);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(221, 52);
             this.button3.TabIndex = 6;
             this.button3.Text = "Киске Урахара";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(560, 174);
+            this.pictureBox4.Location = new System.Drawing.Point(545, 216);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(153, 152);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,12 +105,13 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(533, 347);
+            this.button4.Location = new System.Drawing.Point(518, 389);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(221, 52);
             this.button4.TabIndex = 8;
             this.button4.Text = "Рукия Кучики";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button_Click);
             // 
             // Findbutton
             // 
@@ -120,7 +127,7 @@
             // Раса
             // 
             this.Раса.AutoSize = true;
-            this.Раса.Location = new System.Drawing.Point(24, 31);
+            this.Раса.Location = new System.Drawing.Point(38, 65);
             this.Раса.Name = "Раса";
             this.Раса.Size = new System.Drawing.Size(39, 16);
             this.Раса.TabIndex = 11;
@@ -139,7 +146,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 70);
+            this.label2.Location = new System.Drawing.Point(36, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 13;
@@ -148,33 +155,78 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 109);
+            this.label3.Location = new System.Drawing.Point(36, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 16);
             this.label3.TabIndex = 14;
             this.label3.Text = "Мир";
             // 
-            // comboBox1
+            // rasaCombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.rasaCombobox.FormattingEnabled = true;
+            this.rasaCombobox.Items.AddRange(new object[] {
             "Шинигами",
-            "Квинси",
-            "Вайзард",
-            "Пустой",
-            "Аранкар",
-            "Подчинитель"});
-            this.comboBox1.Location = new System.Drawing.Point(78, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 24);
-            this.comboBox1.TabIndex = 15;
+            "Человек",
+            "Душа"});
+            this.rasaCombobox.Location = new System.Drawing.Point(90, 62);
+            this.rasaCombobox.Name = "rasaCombobox";
+            this.rasaCombobox.Size = new System.Drawing.Size(124, 24);
+            this.rasaCombobox.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 16);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Имя";
+            // 
+            // NameCombobox
+            // 
+            this.NameCombobox.FormattingEnabled = true;
+            this.NameCombobox.Items.AddRange(new object[] {
+            "Ичиго Куросаки",
+            "Киске Урахара",
+            "Рукия Кучики"});
+            this.NameCombobox.Location = new System.Drawing.Point(90, 31);
+            this.NameCombobox.Name = "NameCombobox";
+            this.NameCombobox.Size = new System.Drawing.Size(124, 24);
+            this.NameCombobox.TabIndex = 17;
+            // 
+            // statusComboBox
+            // 
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "Живой ",
+            "Неизвестно",
+            "Мертвый"});
+            this.statusComboBox.Location = new System.Drawing.Point(95, 101);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(121, 24);
+            this.statusComboBox.TabIndex = 18;
+            // 
+            // mirComboBox
+            // 
+            this.mirComboBox.FormattingEnabled = true;
+            this.mirComboBox.Items.AddRange(new object[] {
+            "Мир людей",
+            "Общество душ"});
+            this.mirComboBox.Location = new System.Drawing.Point(94, 143);
+            this.mirComboBox.Name = "mirComboBox";
+            this.mirComboBox.Size = new System.Drawing.Size(120, 24);
+            this.mirComboBox.TabIndex = 19;
             // 
             // filterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.mirComboBox);
+            this.Controls.Add(this.statusComboBox);
+            this.Controls.Add(this.NameCombobox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.rasaCombobox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -210,6 +262,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox rasaCombobox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox NameCombobox;
+        private System.Windows.Forms.ComboBox statusComboBox;
+        private System.Windows.Forms.ComboBox mirComboBox;
     }
 }

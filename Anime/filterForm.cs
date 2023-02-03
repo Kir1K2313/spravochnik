@@ -14,16 +14,18 @@ namespace Anime
     {
        public string Name;
        public string rasa;
-       public string stutus;
+       public string status;
        public string mir;
-       public Button btn;   
-       public characters(string _Name, string _rasa, string _stutus, string _mir, Button _btn)
+       public Button btn;
+       public PictureBox pic;
+       public characters(string _Name, string _rasa, string _status, string _mir, Button _btn, PictureBox _pic)
         {
             Name = _Name;
             rasa = _rasa;
-            stutus = _stutus;
+            status = _status;
             mir = _mir;
             btn = _btn;
+            pic = _pic;
         }
         
 
@@ -32,14 +34,18 @@ namespace Anime
     public partial class filterForm : Form
     {
         characters[] characters_list = new characters[3];
+        private int i;
+  
         public filterForm()
         {
             InitializeComponent();
+            
+             characters_list[0] = new characters("Ичиго Куросаки", "Человек","Живой","Мир людей",button1,pictureBox1);
+             characters_list[1] = new characters("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ",button3, pictureBox3);
+             characters_list[2] = new characters("Рукия Кучики", "Душа", "Живой", "Общество душ", button4, pictureBox4);
 
-             characters_list[0] = new characters("Ичиго Куросаги", "Шинигами,Квинси,Пустой,Подчинитель,Вайзард","Живой","Мир людей");
-             characters_list[1] = new characters("Киске Урахара", "Шинигами", "Живой", "Общество душ");
-             characters_list[2] = new characters("Рукия Кучики", "Душа,Шинигами", "Живой", "Общество душ");
         }
+        
         private void filterForm_Load(object sender, EventArgs e)
         {
 
@@ -49,11 +55,43 @@ namespace Anime
         {
             for(int i=0; i<3; i++)
             {
-                if(comboBox1.Text == characters_list[i].rasa)
+                characters_list[i].btn.Visible = true;
+                characters_list[i].pic.Visible = true;
+
+                if (NameCombobox.Text != ""&&
+                    NameCombobox.Text != characters_list[i].Name)
                 {
-                    MessageBox.Show(characters_list[i].rasa);
+                    characters_list[i].btn.Visible = false;
+                    characters_list[i].pic.Visible = false;
                 }
+                if (rasaCombobox.Text != "" &&
+                    rasaCombobox.Text != characters_list[i].rasa)
+                {
+                    characters_list[i].btn.Visible = false;
+                    characters_list[i].pic.Visible = false;
+                }
+                if (statusComboBox.Text != "" &&
+                    statusComboBox.Text != characters_list[i].status)
+                {
+                    characters_list[i].btn.Visible = false;
+                    characters_list[i].pic.Visible = false;
+                }
+               
+                if (mirComboBox.Text != "" &&
+                    mirComboBox.Text != characters_list[i].mir)
+                {
+                    characters_list[i].btn.Visible = false;
+                    characters_list[i].pic.Visible = false;
+                }
+
             }
+        }
+
+        public void button_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Characters characters = new Characters(btn.Text);
+            characters.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
