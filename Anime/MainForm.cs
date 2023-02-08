@@ -29,5 +29,10 @@ namespace Anime
             filterForm filter = new filterForm();
             filter.ShowDialog();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
