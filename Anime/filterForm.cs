@@ -40,7 +40,7 @@ namespace Anime
 
     public partial class filterForm : Form
     {
-        characters[] characters_list = new characters[6];
+        characters[] characters_list = new characters[10];
         private int i;
 
         public filterForm()
@@ -51,23 +51,36 @@ namespace Anime
             characters_list[1] = new characters("Айзен Сосуке", "Душа", "Живой", "Он сам");
             characters_list[2] = new characters("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ");
             characters_list[3] = new characters("Рукия Кучики", "Душа", "Живой", "Общество душ");
-            // characters_list[4] = new characters("Хирако Шинджи", "Душа", "Живой", "Общество душ", button4, pictureBox4);
-            
+            characters_list[4] = new characters("Хирако Шинджи", "Душа", "Живой", "Общество душ");
+            characters_list[5] = new characters("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
+            characters_list[6] = new characters("Унахана Рецу", "Шинигами", "Живой", "Готей 13");
+            characters_list[7] = new characters("Улькиора Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
+            characters_list[8] = new characters("Урю Исида", "Квинси", "Живой", "Мир людей");
+
             int x = 40;
-            for(int i=0; i<4; i++)
+            int y = 200;
+            for(int i=0; i<9; i++)
             {
-                characters_list[i].pb.Location = new Point(x, 200);
-                characters_list[i].pb.Size = new Size(200, 200);
-                characters_list[i].pb.SizeMode = PictureBoxSizeMode.Zoom;
+                characters_list[i].pb.Location = new Point(x, y);
+                characters_list[i].pb.Size = new Size(200, 150);
+                characters_list[i].pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 Controls.Add(characters_list[i].pb);
 
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
-                characters_list[i].btn.Location = new Point(x, 400);
-                characters_list[i].btn.Size = new Size(200, 30);
+                characters_list[i].btn.Location = new Point(x, y);
+                characters_list[i].btn.Size = new Size(150, 30);
                 characters_list[i].btn.Click += new EventHandler(this.button_Click);
-                Controls.Add(characters_list[i].btn);               
+                Controls.Add(characters_list[i].btn);
+                
+                //if (characters_list[i].btn.Visible)
 
                 x += 210;
+                if(x>620)
+                {
+                    x = 40;
+                    y += 210;
+                }
+
             }
         }
         
@@ -78,30 +91,35 @@ namespace Anime
 
         private void Findbutton_Click(object sender, EventArgs e)
         {
-            for(int i=0; i<3; i++)
+            for(int i=0; i<10; i++)
             {
                 characters_list[i].btn.Visible = true;
+                characters_list[i].pb.Visible = true;
 
                 if (NameCombobox.Text != ""&&
                     NameCombobox.Text != characters_list[i].Name)
                 {
                     characters_list[i].btn.Visible = false;
+                    characters_list[i].pb.Visible = false;
                 }
                 if (rasaCombobox.Text != "" &&
                     rasaCombobox.Text != characters_list[i].rasa)
                 {
                     characters_list[i].btn.Visible = false;
+                    characters_list[i].pb.Visible = false;
                 }
                 if (statusComboBox.Text != "" &&
                     statusComboBox.Text != characters_list[i].status)
                 {
                     characters_list[i].btn.Visible = false;
+                    characters_list[i].pb.Visible = false;
                 }
                
                 if (mirComboBox.Text != "" &&
                     mirComboBox.Text != characters_list[i].mir)
                 {
                     characters_list[i].btn.Visible = false;
+                    characters_list[i].pb.Visible = false;
                 }
 
             }
