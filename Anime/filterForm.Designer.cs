@@ -38,6 +38,9 @@
             this.NameCombobox = new System.Windows.Forms.ComboBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.mirComboBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.namecheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // Findbutton
@@ -103,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 31);
+            this.label4.Location = new System.Drawing.Point(38, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 16);
             this.label4.TabIndex = 16;
@@ -116,7 +119,7 @@
             "Ичиго Куросаки",
             "Киске Урахара",
             "Рукия Кучики"});
-            this.NameCombobox.Location = new System.Drawing.Point(90, 31);
+            this.NameCombobox.Location = new System.Drawing.Point(707, 221);
             this.NameCombobox.Name = "NameCombobox";
             this.NameCombobox.Size = new System.Drawing.Size(124, 24);
             this.NameCombobox.TabIndex = 17;
@@ -144,12 +147,44 @@
             this.mirComboBox.Size = new System.Drawing.Size(120, 24);
             this.mirComboBox.TabIndex = 19;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(341, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Имя";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(90, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(124, 22);
+            this.textBox1.TabIndex = 21;
+            // 
+            // namecheckedListBox
+            // 
+            this.namecheckedListBox.FormattingEnabled = true;
+            this.namecheckedListBox.Items.AddRange(new object[] {
+            "Ичиго Куросаки",
+            "Киске Урахара",
+            "Рукия Кучики"});
+            this.namecheckedListBox.Location = new System.Drawing.Point(390, 39);
+            this.namecheckedListBox.Name = "namecheckedListBox";
+            this.namecheckedListBox.Size = new System.Drawing.Size(150, 89);
+            this.namecheckedListBox.TabIndex = 22;
+            this.namecheckedListBox.SelectedIndexChanged += new System.EventHandler(this.namecheckedListBox_SelectedIndexChanged);
+            // 
             // filterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1070, 563);
+            this.Controls.Add(this.namecheckedListBox);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.mirComboBox);
             this.Controls.Add(this.statusComboBox);
             this.Controls.Add(this.NameCombobox);
@@ -179,5 +214,8 @@
         private System.Windows.Forms.ComboBox NameCombobox;
         private System.Windows.Forms.ComboBox statusComboBox;
         private System.Windows.Forms.ComboBox mirComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckedListBox namecheckedListBox;
     }
 }

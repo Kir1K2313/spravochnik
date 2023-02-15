@@ -28,7 +28,7 @@ namespace Anime
             btn = new Button();
             btn.Text = Name;
             pb = new PictureBox();
-           try
+            try
             {
                 pb.Load("../../Pictures/" + Name + ".jpg");
             }
@@ -40,7 +40,7 @@ namespace Anime
 
     public partial class filterForm : Form
     {
-        characters[] characters_list = new characters[10];
+        characters[] characters_list = new characters[9];
         private int i;
 
         public filterForm()
@@ -59,28 +59,31 @@ namespace Anime
 
             int x = 40;
             int y = 200;
-            for(int i=0; i<9; i++)
+            for(int i=0; i < characters_list.Length; i++)
             {
-                characters_list[i].pb.Location = new Point(x, y);
-                characters_list[i].pb.Size = new Size(200, 150);
-                characters_list[i].pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                Controls.Add(characters_list[i].pb);
+
 
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
                 characters_list[i].btn.Location = new Point(x, y);
                 characters_list[i].btn.Size = new Size(150, 30);
                 characters_list[i].btn.Click += new EventHandler(this.button_Click);
                 Controls.Add(characters_list[i].btn);
+
+
+                characters_list[i].pb.Location = new Point(x, y);
+                characters_list[i].pb.Size = new Size(200, 150);
+                characters_list[i].pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                Controls.Add(characters_list[i].pb);
+
+
+                    x += 210;
+                    if (x > 620)
+                    {
+                        x = 40;
+                        y += 210;
+                    }
+
                 
-                //if (characters_list[i].btn.Visible)
-
-                x += 210;
-                if(x>620)
-                {
-                    x = 40;
-                    y += 210;
-                }
-
             }
         }
         
@@ -91,13 +94,16 @@ namespace Anime
 
         private void Findbutton_Click(object sender, EventArgs e)
         {
-            for(int i=0; i<10; i++)
+            int x = 40;
+            int y = 200;
+
+            for(int i=0; i < characters_list.Length; i++)
             {
                 characters_list[i].btn.Visible = true;
                 characters_list[i].pb.Visible = true;
 
-                if (NameCombobox.Text != ""&&
-                    NameCombobox.Text != characters_list[i].Name)
+                if (namecheckedListBox.CheckedItems.Count > 0 &&
+                    namecheckedListBox.CheckedItems.Contains (characters_list[i].Name))
                 {
                     characters_list[i].btn.Visible = false;
                     characters_list[i].pb.Visible = false;
@@ -121,6 +127,18 @@ namespace Anime
                     characters_list[i].btn.Visible = false;
                     characters_list[i].pb.Visible = false;
                 }
+              if (characters_list[i].pb.Visible)
+                {
+                    characters_list[i].btn.Location = new Point(x, y);
+                    characters_list[i].pb.Location = new Point(x, y);
+                    x += 210;
+                    if (x > 620)
+                    {
+                        x = 40;
+                        y += 210;
+                    }
+
+                }
 
             }
         }
@@ -135,6 +153,11 @@ namespace Anime
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void namecheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            KeyDown();
         }
     }
 }
