@@ -30,19 +30,5 @@ namespace Anime
             filter.ShowDialog();
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

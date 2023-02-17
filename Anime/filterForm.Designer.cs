@@ -85,11 +85,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 143);
+            this.label3.Location = new System.Drawing.Point(13, 143);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Мир";
+            this.label3.Text = "Фракция";
             // 
             // rasaCombobox
             // 
@@ -97,7 +97,9 @@
             this.rasaCombobox.Items.AddRange(new object[] {
             "Шинигами",
             "Человек",
-            "Душа"});
+            "Душа",
+            "Квинси",
+            "Арранкар"});
             this.rasaCombobox.Location = new System.Drawing.Point(90, 62);
             this.rasaCombobox.Name = "rasaCombobox";
             this.rasaCombobox.Size = new System.Drawing.Size(124, 24);
@@ -141,7 +143,9 @@
             this.mirComboBox.FormattingEnabled = true;
             this.mirComboBox.Items.AddRange(new object[] {
             "Мир людей",
-            "Общество душ"});
+            "Общество душ",
+            "Уэко Мундо",
+            "Готей 13"});
             this.mirComboBox.Location = new System.Drawing.Point(94, 143);
             this.mirComboBox.Name = "mirComboBox";
             this.mirComboBox.Size = new System.Drawing.Size(120, 24);
@@ -169,12 +173,18 @@
             this.namecheckedListBox.Items.AddRange(new object[] {
             "Ичиго Куросаки",
             "Киске Урахара",
-            "Рукия Кучики"});
+            "Рукия Кучики",
+            "Айзен Сосуке",
+            "Улькиорра Сифер",
+            "Унохана Рецу",
+            "Хирако Шинджи",
+            "Ямамото Генрюсай",
+            "Урю Исида"});
             this.namecheckedListBox.Location = new System.Drawing.Point(390, 39);
             this.namecheckedListBox.Name = "namecheckedListBox";
             this.namecheckedListBox.Size = new System.Drawing.Size(150, 89);
             this.namecheckedListBox.TabIndex = 22;
-            this.namecheckedListBox.SelectedIndexChanged += new System.EventHandler(this.namecheckedListBox_SelectedIndexChanged);
+            this.namecheckedListBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.namecheckedListBox_KeyDown);
             // 
             // filterForm
             // 

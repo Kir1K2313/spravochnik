@@ -16,15 +16,15 @@ namespace Anime
        public string Name;
        public string rasa;
        public string status;
-       public string mir;
+       public string frak;
        public Button btn;
        public PictureBox pb;
-       public characters(string _Name, string _rasa, string _status, string _mir)
+       public characters(string _Name, string _rasa, string _status, string _frak)
         {
             Name = _Name;
             rasa = _rasa;
             status = _status;
-            mir = _mir;
+            frak = _frak;
             btn = new Button();
             btn.Text = Name;
             pb = new PictureBox();
@@ -35,7 +35,6 @@ namespace Anime
             catch (Exception) { }
         }
         
-
     }
 
     public partial class filterForm : Form
@@ -53,16 +52,14 @@ namespace Anime
             characters_list[3] = new characters("Рукия Кучики", "Душа", "Живой", "Общество душ");
             characters_list[4] = new characters("Хирако Шинджи", "Душа", "Живой", "Общество душ");
             characters_list[5] = new characters("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
-            characters_list[6] = new characters("Унахана Рецу", "Шинигами", "Живой", "Готей 13");
-            characters_list[7] = new characters("Улькиора Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
+            characters_list[6] = new characters("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
+            characters_list[7] = new characters("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
             characters_list[8] = new characters("Урю Исида", "Квинси", "Живой", "Мир людей");
 
             int x = 40;
             int y = 200;
             for(int i=0; i < characters_list.Length; i++)
             {
-
-
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
                 characters_list[i].btn.Location = new Point(x, y);
                 characters_list[i].btn.Size = new Size(150, 30);
@@ -74,8 +71,6 @@ namespace Anime
                 characters_list[i].pb.Size = new Size(200, 150);
                 characters_list[i].pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 Controls.Add(characters_list[i].pb);
-
-
                     x += 210;
                     if (x > 620)
                     {
@@ -122,7 +117,7 @@ namespace Anime
                 }
                
                 if (mirComboBox.Text != "" &&
-                    mirComboBox.Text != characters_list[i].mir)
+                    mirComboBox.Text != characters_list[i].frak)
                 {
                     characters_list[i].btn.Visible = false;
                     characters_list[i].pb.Visible = false;
@@ -155,9 +150,13 @@ namespace Anime
 
         }
 
-        private void namecheckedListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void namecheckedListBox_KeyDown(object sender, KeyEventArgs e)
         {
-            KeyDown();
+            if (e.KeyCode == Keys.Enter)
+            {
+                Findbutton_Click(null, null);
+            }
         }
+
     }
 }

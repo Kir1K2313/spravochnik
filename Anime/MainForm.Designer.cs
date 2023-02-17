@@ -53,7 +53,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(41, 232);
+            this.button1.Location = new System.Drawing.Point(41, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 52);
             this.button1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(41, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(41, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 167);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,18 +74,17 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(285, 59);
+            this.pictureBox2.Location = new System.Drawing.Point(285, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 152);
+            this.pictureBox2.Size = new System.Drawing.Size(221, 167);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(285, 232);
+            this.button2.Location = new System.Drawing.Point(285, 191);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(221, 52);
             this.button2.TabIndex = 2;
@@ -96,9 +95,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(528, 59);
+            this.pictureBox3.Location = new System.Drawing.Point(538, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(221, 152);
+            this.pictureBox3.Size = new System.Drawing.Size(221, 167);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
@@ -106,7 +105,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(528, 232);
+            this.button3.Location = new System.Drawing.Point(538, 191);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(221, 52);
             this.button3.TabIndex = 4;
@@ -117,9 +116,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(785, 59);
+            this.pictureBox4.Location = new System.Drawing.Point(785, 9);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(210, 152);
+            this.pictureBox4.Size = new System.Drawing.Size(210, 170);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
@@ -127,9 +126,9 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(774, 232);
+            this.button4.Location = new System.Drawing.Point(785, 191);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 52);
+            this.button4.Size = new System.Drawing.Size(221, 57);
             this.button4.TabIndex = 6;
             this.button4.Text = "Рукия Кучики";
             this.button4.UseVisualStyleBackColor = true;
@@ -149,20 +148,19 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(41, 313);
+            this.pictureBox5.Location = new System.Drawing.Point(41, 268);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(221, 162);
+            this.pictureBox5.Size = new System.Drawing.Size(232, 168);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(301, 313);
+            this.pictureBox6.Location = new System.Drawing.Point(299, 251);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(192, 162);
+            this.pictureBox6.Size = new System.Drawing.Size(207, 185);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
@@ -170,7 +168,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(41, 499);
+            this.button5.Location = new System.Drawing.Point(41, 459);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(221, 52);
             this.button5.TabIndex = 11;
@@ -180,7 +178,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(285, 499);
+            this.button6.Location = new System.Drawing.Point(299, 459);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(221, 52);
             this.button6.TabIndex = 12;
@@ -207,7 +205,6 @@
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
