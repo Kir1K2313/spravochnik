@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="basket.Designer.cs">
+      <DependentUpon>basket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Characters.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="basket.resx">
+      <DependentUpon>basket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Characters.resx">
       <DependentUpon>Characters.cs</DependentUpon>
     </EmbeddedResource>

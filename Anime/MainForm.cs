@@ -30,5 +30,20 @@ namespace Anime
             filter.ShowDialog();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void basketbutton_Click(object sender, EventArgs e)
+        {
+            basket basket = new basket();
+            basket.Show();
+        }
     }
 }

@@ -206,7 +206,7 @@
             this.Controls.Add(this.Раса);
             this.Controls.Add(this.Findbutton);
             this.Name = "filterForm";
-            this.Text = "Form1";
+            this.Text = "фильтр";
             this.Load += new System.EventHandler(this.filterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

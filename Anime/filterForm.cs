@@ -39,7 +39,7 @@ namespace Anime
 
     public partial class filterForm : Form
     {
-        characters[] characters_list = new characters[9];
+        public static characters[] characters_list = new characters[9];
         private int i;
 
         public filterForm()
@@ -69,7 +69,7 @@ namespace Anime
 
                 characters_list[i].pb.Location = new Point(x, y);
                 characters_list[i].pb.Size = new Size(200, 150);
-                characters_list[i].pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                characters_list[i].pb.SizeMode = PictureBoxSizeMode.Zoom;
                 Controls.Add(characters_list[i].pb);
                     x += 210;
                     if (x > 620)
@@ -77,8 +77,6 @@ namespace Anime
                         x = 40;
                         y += 210;
                     }
-
-                
             }
         }
         
@@ -132,9 +130,7 @@ namespace Anime
                         x = 40;
                         y += 210;
                     }
-
                 }
-
             }
         }
 

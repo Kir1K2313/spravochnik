@@ -31,5 +31,10 @@ namespace Anime
         {
 
         }
+
+        private void basketbutton_Click(object sender, EventArgs e)
+        {
+           basket.characters_list.Add(new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей"));
+        }
     }
 }

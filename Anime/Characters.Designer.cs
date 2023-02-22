@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.basketbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,11 +65,23 @@
             this.textBox1.Size = new System.Drawing.Size(421, 480);
             this.textBox1.TabIndex = 2;
             // 
+            // basketbutton
+            // 
+            this.basketbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.basketbutton.Location = new System.Drawing.Point(225, 23);
+            this.basketbutton.Name = "basketbutton";
+            this.basketbutton.Size = new System.Drawing.Size(146, 54);
+            this.basketbutton.TabIndex = 20;
+            this.basketbutton.Text = "Добавить";
+            this.basketbutton.UseVisualStyleBackColor = true;
+            this.basketbutton.Click += new System.EventHandler(this.basketbutton_Click);
+            // 
             // Characters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 593);
+            this.Controls.Add(this.basketbutton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -86,5 +99,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button basketbutton;
     }
 }
