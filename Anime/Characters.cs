@@ -13,8 +13,10 @@ namespace Anime
 {
     public partial class Characters : Form
     {
+        Characters chare;
         public Characters(string name)
         {
+
             InitializeComponent();
 
             Text = name;
@@ -34,7 +36,7 @@ namespace Anime
 
         private void basketbutton_Click(object sender, EventArgs e)
         {
-           basket.characters_list.Add(new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей"));
+            Anime.Select.characters_list.Add(new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей"));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Anime
 {
-    partial class basket
+    partial class Select
     {
         /// <summary>
         /// Required designer variable.

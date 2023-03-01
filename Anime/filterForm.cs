@@ -46,16 +46,6 @@ namespace Anime
         {
             InitializeComponent();
 
-            characters_list[0] = new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей");
-            characters_list[1] = new characters("Айзен Сосуке", "Душа", "Живой", "Он сам");
-            characters_list[2] = new characters("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ");
-            characters_list[3] = new characters("Рукия Кучики", "Душа", "Живой", "Общество душ");
-            characters_list[4] = new characters("Хирако Шинджи", "Душа", "Живой", "Общество душ");
-            characters_list[5] = new characters("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
-            characters_list[6] = new characters("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
-            characters_list[7] = new characters("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
-            characters_list[8] = new characters("Урю Исида", "Квинси", "Живой", "Мир людей");
-
             int x = 40;
             int y = 200;
             for(int i=0; i < characters_list.Length; i++)
@@ -132,6 +122,18 @@ namespace Anime
                     }
                 }
             }
+        }
+        public static void charactersClick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < characters_list.Length; i++)
+            {
+                if ((Button)sender).Text == characters_list[i].btn.Text)
+                {
+                  Characters characters = new Characters(characters_list[i]);
+                 characters.Show();
+                }
+             }
+           
         }
 
         public void button_Click(object sender, EventArgs e)

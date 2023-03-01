@@ -48,7 +48,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
-            this.basketbutton = new System.Windows.Forms.Button();
+            this.Selectbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -261,23 +261,23 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button_Click);
             // 
-            // basketbutton
+            // Selectbutton
             // 
-            this.basketbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.basketbutton.Location = new System.Drawing.Point(638, 626);
-            this.basketbutton.Name = "basketbutton";
-            this.basketbutton.Size = new System.Drawing.Size(146, 54);
-            this.basketbutton.TabIndex = 19;
-            this.basketbutton.Text = "Корзина";
-            this.basketbutton.UseVisualStyleBackColor = true;
-            this.basketbutton.Click += new System.EventHandler(this.basketbutton_Click);
+            this.Selectbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Selectbutton.Location = new System.Drawing.Point(638, 626);
+            this.Selectbutton.Name = "Selectbutton";
+            this.Selectbutton.Size = new System.Drawing.Size(146, 54);
+            this.Selectbutton.TabIndex = 19;
+            this.Selectbutton.Text = "Избранное";
+            this.Selectbutton.UseVisualStyleBackColor = true;
+            this.Selectbutton.Click += new System.EventHandler(this.Selectbutton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 793);
-            this.Controls.Add(this.basketbutton);
+            this.Controls.Add(this.Selectbutton);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -299,7 +299,6 @@
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -334,7 +333,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button basketbutton;
+        private System.Windows.Forms.Button Selectbutton;
     }
 }
 
