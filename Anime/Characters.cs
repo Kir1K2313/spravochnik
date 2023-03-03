@@ -14,6 +14,8 @@ namespace Anime
     public partial class Characters : Form
     {
         Characters chare;
+        private characters characters;
+
         public Characters(string name)
         {
 
@@ -27,6 +29,11 @@ namespace Anime
                 textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
             }
             catch (Exception) { }
+        }
+
+        public Characters(characters characters)
+        {
+            this.characters = characters;
         }
 
         private void Characters_Load(object sender, EventArgs e)

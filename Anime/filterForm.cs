@@ -123,18 +123,37 @@ namespace Anime
                 }
             }
         }
+        /*
         public static void charactersClick(object sender, EventArgs e)
         {
             for (int i = 0; i < characters_list.Length; i++)
             {
                 if ((Button)sender).Text == characters_list[i].btn.Text)
                 {
-                  Characters characters = new Characters(characters_list[i]);
+                 Characters characters = new Characters(characters_list[i]);
                  characters.Show();
-                }
-             }
-           
+            
+       
         }
+                
+        */
+        public static void charactersClick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < characters_list.Length; i++)
+            {
+                if (((Button)sender).Text == characters_list[i].btn.Text)
+                {
+                    Characters characters = new Characters(characters_list[i]);
+                    characters.Show();
+                }
+            }
+        }
+
+
+
+
+
+
 
         public void button_Click(object sender, EventArgs e)
         {

@@ -1,4 +1,6 @@
-﻿namespace Anime
+﻿using System;
+
+namespace Anime
 {
     partial class Select
     {
@@ -6,6 +8,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private EventHandler basket_Load;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -37,7 +40,6 @@
             this.ClientSize = new System.Drawing.Size(948, 542);
             this.Name = "basket";
             this.Text = "Корзина";
-            this.Load += new System.EventHandler(this.basket_Load);
             this.ResumeLayout(false);
 
         }

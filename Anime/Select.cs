@@ -21,12 +21,6 @@ namespace Anime
 
             foreach (characters characters in characters_list)
             {
-               Button btn = new Button();
-               btn.Text = characters.btn.Text;            
-               btn.Font = new Font("Microsoft Sans Serif", 12F);
-               btn.Location = new Point(x, y);
-               btn.Size = new Size(150, 30);
-               Controls.Add(btn);
 
                PictureBox pb = new PictureBox();
                pb.Image = characters.pb.Image;
@@ -35,13 +29,42 @@ namespace Anime
                pb.SizeMode = PictureBoxSizeMode.Zoom;
                Controls.Add(pb);
 
-                /*  Label lbl = new Label();
-                   lbl.Text = characters.btn.Text;
-                   lbl.Font = new Font("Microsoft Sans Serif", 12F);
-                   lbl.Location = new Point(x, y);
-                   lbl.Size = new Size(150, 30);
-                   Controls.Add(lbl);
-                */
+                Label lbl_name = new Label();
+                lbl_name.Text = "Имя" + characters.Name;
+                lbl_name.Font = new Font("Microsoft Sans Serif", 12F);
+                lbl_name.Location = new Point(x + 250, y);
+                lbl_name.Size = new Size(150, 30);
+                Controls.Add(lbl_name);
+
+                Label lbl_rasa = new Label();
+                lbl_rasa.Text = "Раса" + characters.rasa;
+                lbl_rasa.Font = new Font("Microsoft Sans Serif", 12F);
+                lbl_rasa.Location = new Point(x + 250, y + 50);
+                lbl_rasa.Size = new Size(150, 30);
+                Controls.Add(lbl_rasa);
+
+                Label lbl_status = new Label();
+                lbl_status.Text = "Статус" + characters.status;
+                lbl_status.Font = new Font("Microsoft Sans Serif", 12F);
+                lbl_status.Location = new Point(x + 250, y + 100);
+                lbl_status.Size = new Size(150, 30);
+                Controls.Add(lbl_status);
+
+                Label lbl_frak = new Label();
+                lbl_frak.Text = "Фракция" + characters.frak;
+                lbl_frak.Font = new Font("Microsoft Sans Serif", 12F);
+                lbl_frak.Location = new Point(x + 250, y + 150);
+                lbl_frak.Size = new Size(150, 30);
+                Controls.Add(lbl_frak);
+
+                Button btn = new Button();
+                btn.Text = characters.btn.Text;
+                btn.Font = new Font("Microsoft Sans Serif", 12F);
+                btn.Location = new Point(x + 200, y + 200);
+                btn.Size = new Size(150, 30);
+                Controls.Add(btn);
+
+
                 x += 210;
                 if (x > 620)
                 {

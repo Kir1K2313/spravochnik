@@ -23,8 +23,7 @@ namespace Anime
             Characters characters = new Characters(btn.Text);
             characters.Show();
         }
-        public void
-
+        
 
         private void filterbutton_Click(object sender, EventArgs e)
         {
@@ -55,10 +54,6 @@ namespace Anime
 
         }
 
-        private void Selectbutton_Click(object sender, EventArgs e)
-        {
-            Select basket = new Select();
-            basket.Show();
-        }
+   
     }
 }
