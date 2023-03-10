@@ -19,16 +19,14 @@ namespace Anime
 
         public void button_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            Characters characters = new Characters(btn.Text);
-            characters.Show();
+            filterForm.charactersClick(sender, e);
         }
         
 
         private void filterbutton_Click(object sender, EventArgs e)
         {
             filterForm filter = new filterForm();
-            filter.Show();
+            filter.ShowDialog();
         }
         private void Selectbutton_Click(object sender, EventArgs e)
         {
@@ -36,7 +34,17 @@ namespace Anime
             select.Show();
         }
 
-        private void MainForm_Load(object sender, EventArgs e, filterForm filterForm)
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load_1(object sender, EventArgs e)
         {
             filterForm.characters_list[0] = new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей");
             filterForm.characters_list[1] = new characters("Айзен Сосуке", "Душа", "Живой", "Он сам");
@@ -47,13 +55,7 @@ namespace Anime
             filterForm.characters_list[6] = new characters("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
             filterForm.characters_list[7] = new characters("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
             filterForm.characters_list[8] = new characters("Урю Исида", "Квинси", "Живой", "Мир людей");
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
-        {
 
         }
-
-   
     }
 }

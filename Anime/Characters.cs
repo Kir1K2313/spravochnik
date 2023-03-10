@@ -13,28 +13,24 @@ namespace Anime
 {
     public partial class Characters : Form
     {
-        Characters chare;
-        private characters characters;
+        characters characters;
 
-        public Characters(string name)
+        public Characters(characters _characters)
         {
-
             InitializeComponent();
 
-            Text = name;
-            label1.Text = name;
+            characters = _characters;
+
+            Text = characters.Name;
+            label1.Text = characters.Name;
             try 
             { 
-                pictureBox1.Load("../../Pictures/" + name + ".jpg");
-                textBox1.Text = File.ReadAllText("../../Pictures/" + name + ".txt");
+                pictureBox1.Load("../../Pictures/" + characters.Name + ".jpg");
+                textBox1.Text = File.ReadAllText("../../Pictures/" + characters.Name + ".txt");
             }
             catch (Exception) { }
         }
 
-        public Characters(characters characters)
-        {
-            this.characters = characters;
-        }
 
         private void Characters_Load(object sender, EventArgs e)
         {
@@ -43,7 +39,7 @@ namespace Anime
 
         private void basketbutton_Click(object sender, EventArgs e)
         {
-            Anime.Select.characters_list.Add(new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей"));
+           Anime.Select.characters_list.Add(characters);
         }
     }
 }

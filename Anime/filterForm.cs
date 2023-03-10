@@ -53,7 +53,7 @@ namespace Anime
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
                 characters_list[i].btn.Location = new Point(x, y);
                 characters_list[i].btn.Size = new Size(150, 30);
-                characters_list[i].btn.Click += new EventHandler(this.button_Click);
+                characters_list[i].btn.Click += new EventHandler(charactersClick);
                 Controls.Add(characters_list[i].btn);
 
 
@@ -123,20 +123,8 @@ namespace Anime
                 }
             }
         }
-        /*
-        public static void charactersClick(object sender, EventArgs e)
-        {
-            for (int i = 0; i < characters_list.Length; i++)
-            {
-                if ((Button)sender).Text == characters_list[i].btn.Text)
-                {
-                 Characters characters = new Characters(characters_list[i]);
-                 characters.Show();
-            
-       
-        }
-                
-        */
+        
+                       
         public static void charactersClick(object sender, EventArgs e)
         {
             for (int i = 0; i < characters_list.Length; i++)
@@ -153,14 +141,6 @@ namespace Anime
 
 
 
-
-
-        public void button_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            Characters characters = new Characters(btn.Text);
-            characters.Show();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
