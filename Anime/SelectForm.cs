@@ -10,25 +10,31 @@ using System.Windows.Forms;
 
 namespace Anime
 {
-    public partial class Select : Form
+    public partial class SelectForm : Form
     {
-        public static List<characters> characters_list = new List<characters>();
+        public static Dictionary<charactersstruct, int> characters_list = new Dictionary<charactersstruct, int>();
 
-        public Select()
+        public SelectForm()
         {
             InitializeComponent();
+            ReDraw();
+        }
+        void ReDraw()
+        {
+            Controls.Clear();
             int x = 10;
             int y = 10;
 
-            foreach (characters characters in characters_list)
+            foreach (KeyValuePair<charactersstruct, int> mycharac in characters_list)
             {
+                charactersstruct characters = mycharac.Key;
                 #region картинка
                 PictureBox pb = new PictureBox();
-               pb.Image = characters.pb.Image;
-               pb.Location = new Point(x, y);
-               pb.Size = new Size(200, 150);
-               pb.SizeMode = PictureBoxSizeMode.Zoom;
-               Controls.Add(pb);
+                pb.Image = characters.pb.Image;
+                pb.Location = new Point(x, y);
+                pb.Size = new Size(200, 150);
+                pb.SizeMode = PictureBoxSizeMode.Zoom;
+                Controls.Add(pb);
                 #endregion
                 #region парамет
                 Label lbl_name = new Label();
@@ -68,14 +74,42 @@ namespace Anime
                 btn.Click += new EventHandler(filterForm.charactersClick);
                 Controls.Add(btn);
                 #endregion
+                #region Удаление
+                Button btnDelete = new Button();
+                btnDelete.Text = "Удалить";
+                btnDelete.Font = new Font("Microsoft Sans Serif", 12F);
+                btnDelete.Location = new Point(x + 400, y);
+                btnDelete.Size = new Size(200, 30);
+                btnDelete.Click += new EventHandler(DeleteClick);
+                Controls.Add(btnDelete);
+                #endregion
 
                 y += 210;
-            
+
             }
         }
 
+        void DeleteClick(object sender, EventArgs e)
+        {
+            int i = 0;
+            Button btn =  (Button)sender;
+            Dictionary<charactersstruct, int> mycharac1 = new Dictionary<charactersstruct, int>();
+            foreach (KeyValuePair <charactersstruct, int> mycharac in characters_list)
+            {
+                charactersstruct characters = mycharac.Key;
+                if (btn.Location == new Point(410, 210*i + 10))
+                {
 
-
+                }
+                else
+                {
+                    mycharac1[mycharac.Key] = mycharac.Value;
+                }
+                i++;
+            }
+            characters_list = mycharac1;
+            ReDraw();
+        }
 
                private void Select_Load(object sender, EventArgs e)
                 {

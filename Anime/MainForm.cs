@@ -30,7 +30,7 @@ namespace Anime
         }
         private void Selectbutton_Click(object sender, EventArgs e)
         {
-            Select select = new Select();
+            SelectForm select = new SelectForm();
             select.Show();
         }
 
@@ -46,15 +46,15 @@ namespace Anime
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
-            filterForm.characters_list[0] = new characters("Ичиго Куросаки", "Человек", "Живой", "Мир людей");
-            filterForm.characters_list[1] = new characters("Айзен Сосуке", "Душа", "Живой", "Он сам");
-            filterForm.characters_list[2] = new characters("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ");
-            filterForm.characters_list[3] = new characters("Рукия Кучики", "Душа", "Живой", "Общество душ");
-            filterForm.characters_list[4] = new characters("Хирако Шинджи", "Душа", "Живой", "Общество душ");
-            filterForm.characters_list[5] = new characters("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
-            filterForm.characters_list[6] = new characters("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
-            filterForm.characters_list[7] = new characters("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
-            filterForm.characters_list[8] = new characters("Урю Исида", "Квинси", "Живой", "Мир людей");
+            filterForm.characters_list[0] = new charactersstruct("Ичиго Куросаки", "Человек", "Живой", "Мир людей");
+            filterForm.characters_list[1] = new charactersstruct("Айзен Сосуке", "Душа", "Живой", "Он сам");
+            filterForm.characters_list[2] = new charactersstruct("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ");
+            filterForm.characters_list[3] = new charactersstruct("Рукия Кучики", "Душа", "Живой", "Общество душ");
+            filterForm.characters_list[4] = new charactersstruct("Хирако Шинджи", "Душа", "Живой", "Общество душ");
+            filterForm.characters_list[5] = new charactersstruct("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
+            filterForm.characters_list[6] = new charactersstruct("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
+            filterForm.characters_list[7] = new charactersstruct("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
+            filterForm.characters_list[8] = new charactersstruct("Урю Исида", "Квинси", "Живой", "Мир людей");
 
         }
     }

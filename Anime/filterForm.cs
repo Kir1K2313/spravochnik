@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Anime
 {
-     public struct characters
+     public struct charactersstruct
     {
        public string Name;
        public string rasa;
@@ -19,7 +19,7 @@ namespace Anime
        public string frak;
        public Button btn;
        public PictureBox pb;
-       public characters(string _Name, string _rasa, string _status, string _frak)
+       public charactersstruct(string _Name, string _rasa, string _status, string _frak)
         {
             Name = _Name;
             rasa = _rasa;
@@ -39,7 +39,7 @@ namespace Anime
 
     public partial class filterForm : Form
     {
-        public static characters[] characters_list = new characters[9];
+        public static charactersstruct[] characters_list = new charactersstruct[9];
         private int i;
 
         public filterForm()

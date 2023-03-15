@@ -2,7 +2,7 @@
 
 namespace Anime
 {
-    partial class Select
+    partial class SelectForm
     {
         /// <summary>
         /// Required designer variable.

@@ -13,9 +13,9 @@ namespace Anime
 {
     public partial class Characters : Form
     {
-        characters characters;
+        charactersstruct characters;
 
-        public Characters(characters _characters)
+        public Characters(charactersstruct _characters)
         {
             InitializeComponent();
 
@@ -39,7 +39,15 @@ namespace Anime
 
         private void basketbutton_Click(object sender, EventArgs e)
         {
-           Anime.Select.characters_list.Add(characters);
+           if(SelectForm.characters_list.ContainsKey(characters))
+            {
+               SelectForm.characters_list[characters]++;
+            }
+           else
+            {
+               SelectForm.characters_list.Add(characters, 1);
+            }
+      
         }
     }
 }
