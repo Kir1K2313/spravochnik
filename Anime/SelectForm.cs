@@ -78,8 +78,8 @@ namespace Anime
                 Button btnDelete = new Button();
                 btnDelete.Text = "Удалить";
                 btnDelete.Font = new Font("Microsoft Sans Serif", 12F);
-                btnDelete.Location = new Point(x + 400, y);
-                btnDelete.Size = new Size(200, 30);
+                btnDelete.Location = new Point(x + 490, y);
+                btnDelete.Size = new Size(150, 30);
                 btnDelete.Click += new EventHandler(DeleteClick);
                 Controls.Add(btnDelete);
                 #endregion
@@ -97,7 +97,7 @@ namespace Anime
             foreach (KeyValuePair <charactersstruct, int> mycharac in characters_list)
             {
                 charactersstruct characters = mycharac.Key;
-                if (btn.Location == new Point(410, 210*i + 10))
+                if (btn.Location == new Point(500, 210*i + 10))
                 {
 
                 }

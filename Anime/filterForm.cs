@@ -39,8 +39,7 @@ namespace Anime
 
     public partial class filterForm : Form
     {
-        public static charactersstruct[] characters_list = new charactersstruct[9];
-        private int i;
+        public static List<charactersstruct> characters_list = new List<charactersstruct>();
 
         public filterForm()
         {
@@ -48,7 +47,7 @@ namespace Anime
 
             int x = 40;
             int y = 200;
-            for(int i=0; i < characters_list.Length; i++)
+            for(int i=0; i < characters_list.Count; i++)
             {
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
                 characters_list[i].btn.Location = new Point(x, y);
@@ -80,7 +79,7 @@ namespace Anime
             int x = 40;
             int y = 200;
 
-            for(int i=0; i < characters_list.Length; i++)
+            for(int i=0; i < characters_list.Count; i++)
             {
                 characters_list[i].btn.Visible = true;
                 characters_list[i].pb.Visible = true;
@@ -127,7 +126,7 @@ namespace Anime
                        
         public static void charactersClick(object sender, EventArgs e)
         {
-            for (int i = 0; i < characters_list.Length; i++)
+            for (int i = 0; i < characters_list.Count; i++)
             {
                 if (((Button)sender).Text == characters_list[i].btn.Text)
                 {

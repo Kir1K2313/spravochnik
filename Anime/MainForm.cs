@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,15 +47,14 @@ namespace Anime
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
-            filterForm.characters_list[0] = new charactersstruct("Ичиго Куросаки", "Человек", "Живой", "Мир людей");
-            filterForm.characters_list[1] = new charactersstruct("Айзен Сосуке", "Душа", "Живой", "Он сам");
-            filterForm.characters_list[2] = new charactersstruct("Киске Урахара", "Шинигами", "Неизвестно", "Общество душ");
-            filterForm.characters_list[3] = new charactersstruct("Рукия Кучики", "Душа", "Живой", "Общество душ");
-            filterForm.characters_list[4] = new charactersstruct("Хирако Шинджи", "Душа", "Живой", "Общество душ");
-            filterForm.characters_list[5] = new charactersstruct("Ямамото Генрюсай", "Шинигами", "Живой", "Готей 13");
-            filterForm.characters_list[6] = new charactersstruct("Унохана Рецу", "Шинигами", "Живой", "Готей 13");
-            filterForm.characters_list[7] = new charactersstruct("Улькиорра Сифер", "Арранкар", "Мертвый", "Уэко Мундо");
-            filterForm.characters_list[8] = new charactersstruct("Урю Исида", "Квинси", "Живой", "Мир людей");
+           string[] strs = File.ReadAllLines("characterstext.txt");
+
+           foreach (string str in strs)
+           {
+               string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);
+               charactersstruct characters = new charactersstruct(parts[0], parts[1], parts[2], parts[3]);
+               filterForm.characters_list.Add(characters);
+           }
 
         }
     }
