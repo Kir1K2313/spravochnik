@@ -24,3 +24,4 @@ D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.exe
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.pdb
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.filterForm.resources
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.SelectForm.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.AddcharForm.resources

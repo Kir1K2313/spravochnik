@@ -57,5 +57,16 @@ namespace Anime
            }
 
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void добавитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddcharForm addchar = new AddcharForm();
+            addchar.Show();
+        }
     }
 }
