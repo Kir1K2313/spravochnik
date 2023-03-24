@@ -36,14 +36,44 @@ namespace Anime
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
+            if(NameTB.Text == "")
+            {
+                MessageBox.Show("Заполните поля");
+                return;
+            }
             File.AppendAllText("characters.txt",
                  Environment.NewLine +
                  NameTB.Text + ", " +
                  rasaCB.Text + ", " +
-                 statusTB.Text + ", " +
+                 statusCB.Text + ", " +
                  frakTB.Text);
 
+            if (filename != "")
+            {
+                File.Copy(filename, "../../Pictures/" + NameTB.Text + ".jpg");
+            }
+
             MessageBox.Show("Сохранено успешно");
+            Close();
+        }
+
+        private void rasaCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       private void frakTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        string filename = "";
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filename = openFileDialog1.FileName;
+                pictureBox1.Load(filename);
+            }
         }
     }
 }

@@ -33,21 +33,25 @@
             this.statuslabel = new System.Windows.Forms.Label();
             this.fraklabel = new System.Windows.Forms.Label();
             this.NameTB = new System.Windows.Forms.TextBox();
-            this.statusTB = new System.Windows.Forms.TextBox();
             this.frakTB = new System.Windows.Forms.TextBox();
             this.Savebutton = new System.Windows.Forms.Button();
             this.rasaCB = new System.Windows.Forms.ComboBox();
+            this.statusCB = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Namelabel
             // 
             this.Namelabel.AutoSize = true;
             this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Namelabel.Location = new System.Drawing.Point(12, 40);
+            this.Namelabel.Location = new System.Drawing.Point(53, 27);
             this.Namelabel.Name = "Namelabel";
-            this.Namelabel.Size = new System.Drawing.Size(206, 25);
+            this.Namelabel.Size = new System.Drawing.Size(99, 25);
             this.Namelabel.TabIndex = 0;
-            this.Namelabel.Text = "Название персонажа";
+            this.Namelabel.Text = "Название";
             // 
             // rasalabel
             // 
@@ -63,7 +67,7 @@
             // 
             this.statuslabel.AutoSize = true;
             this.statuslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statuslabel.Location = new System.Drawing.Point(65, 107);
+            this.statuslabel.Location = new System.Drawing.Point(65, 123);
             this.statuslabel.Name = "statuslabel";
             this.statuslabel.Size = new System.Drawing.Size(78, 25);
             this.statuslabel.TabIndex = 2;
@@ -74,7 +78,7 @@
             // 
             this.fraklabel.AutoSize = true;
             this.fraklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fraklabel.Location = new System.Drawing.Point(65, 143);
+            this.fraklabel.Location = new System.Drawing.Point(56, 172);
             this.fraklabel.Name = "fraklabel";
             this.fraklabel.Size = new System.Drawing.Size(96, 25);
             this.fraklabel.TabIndex = 3;
@@ -82,30 +86,24 @@
             // 
             // NameTB
             // 
-            this.NameTB.Location = new System.Drawing.Point(247, 40);
+            this.NameTB.Location = new System.Drawing.Point(182, 31);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(232, 22);
             this.NameTB.TabIndex = 4;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
             // 
-            // statusTB
-            // 
-            this.statusTB.Location = new System.Drawing.Point(182, 110);
-            this.statusTB.Name = "statusTB";
-            this.statusTB.Size = new System.Drawing.Size(232, 22);
-            this.statusTB.TabIndex = 6;
-            // 
             // frakTB
             // 
-            this.frakTB.Location = new System.Drawing.Point(182, 143);
+            this.frakTB.Location = new System.Drawing.Point(182, 176);
             this.frakTB.Name = "frakTB";
             this.frakTB.Size = new System.Drawing.Size(232, 22);
             this.frakTB.TabIndex = 7;
+            this.frakTB.TextChanged += new System.EventHandler(this.frakTB_TextChanged);
             // 
             // Savebutton
             // 
             this.Savebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Savebutton.Location = new System.Drawing.Point(238, 377);
+            this.Savebutton.Location = new System.Drawing.Point(103, 391);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(232, 47);
             this.Savebutton.TabIndex = 8;
@@ -126,16 +124,55 @@
             this.rasaCB.Name = "rasaCB";
             this.rasaCB.Size = new System.Drawing.Size(232, 24);
             this.rasaCB.TabIndex = 9;
+            this.rasaCB.SelectedIndexChanged += new System.EventHandler(this.rasaCB_SelectedIndexChanged);
+            // 
+            // statusCB
+            // 
+            this.statusCB.FormattingEnabled = true;
+            this.statusCB.Items.AddRange(new object[] {
+            "Живой ",
+            "Мертвый",
+            "Неизвестно"});
+            this.statusCB.Location = new System.Drawing.Point(182, 127);
+            this.statusCB.Name = "statusCB";
+            this.statusCB.Size = new System.Drawing.Size(232, 24);
+            this.statusCB.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(443, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(330, 396);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(130, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 68);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Выберите картинку";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // AddcharForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.statusCB);
             this.Controls.Add(this.rasaCB);
             this.Controls.Add(this.Savebutton);
             this.Controls.Add(this.frakTB);
-            this.Controls.Add(this.statusTB);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.fraklabel);
             this.Controls.Add(this.statuslabel);
@@ -144,6 +181,7 @@
             this.Name = "AddcharForm";
             this.Text = "AddcharForm";
             this.Load += new System.EventHandler(this.AddcharForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,9 +194,12 @@
         private System.Windows.Forms.Label statuslabel;
         private System.Windows.Forms.Label fraklabel;
         private System.Windows.Forms.TextBox NameTB;
-        private System.Windows.Forms.TextBox statusTB;
         private System.Windows.Forms.TextBox frakTB;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.ComboBox rasaCB;
+        private System.Windows.Forms.ComboBox statusCB;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

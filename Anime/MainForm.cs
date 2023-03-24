@@ -47,7 +47,7 @@ namespace Anime
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
-           string[] strs = File.ReadAllLines("characterstext.txt");
+           string[] strs = File.ReadAllLines("characters.txt");
 
            foreach (string str in strs)
            {
@@ -67,6 +67,7 @@ namespace Anime
         {
             AddcharForm addchar = new AddcharForm();
             addchar.Show();
+            MainForm_Load_1(null, null);
         }
     }
 }
