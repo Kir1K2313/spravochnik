@@ -38,6 +38,7 @@
             this.Selectbutton = new System.Windows.Forms.Button();
             this.AddcharcontextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -116,14 +117,25 @@
             this.AddcharcontextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.добавитьГерояToolStripMenuItem});
             this.AddcharcontextMenuStrip1.Name = "contextMenuStrip1";
-            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(211, 56);
+            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(190, 28);
             // 
             // добавитьГерояToolStripMenuItem
             // 
             this.добавитьГерояToolStripMenuItem.Name = "добавитьГерояToolStripMenuItem";
-            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.добавитьГерояToolStripMenuItem.Text = "Добавить героя";
             this.добавитьГерояToolStripMenuItem.Click += new System.EventHandler(this.добавитьГерояToolStripMenuItem_Click);
+            // 
+            // helpbutton
+            // 
+            this.helpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.helpbutton.Location = new System.Drawing.Point(447, 521);
+            this.helpbutton.Name = "helpbutton";
+            this.helpbutton.Size = new System.Drawing.Size(160, 44);
+            this.helpbutton.TabIndex = 20;
+            this.helpbutton.Text = "Помощь";
+            this.helpbutton.UseVisualStyleBackColor = true;
+            this.helpbutton.Click += new System.EventHandler(this.helpbutton_Click);
             // 
             // MainForm
             // 
@@ -133,6 +145,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1125, 793);
             this.ContextMenuStrip = this.AddcharcontextMenuStrip1;
+            this.Controls.Add(this.helpbutton);
             this.Controls.Add(this.Selectbutton);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.filterbutton);
@@ -160,6 +173,7 @@
         private System.Windows.Forms.Button Selectbutton;
         private System.Windows.Forms.ContextMenuStrip AddcharcontextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem добавитьГерояToolStripMenuItem;
+        private System.Windows.Forms.Button helpbutton;
     }
 }
 

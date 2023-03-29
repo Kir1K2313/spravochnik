@@ -33,13 +33,13 @@
             this.statuslabel = new System.Windows.Forms.Label();
             this.fraklabel = new System.Windows.Forms.Label();
             this.NameTB = new System.Windows.Forms.TextBox();
-            this.frakTB = new System.Windows.Forms.TextBox();
             this.Savebutton = new System.Windows.Forms.Button();
             this.rasaCB = new System.Windows.Forms.ComboBox();
             this.statusCB = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.frakCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,14 +91,6 @@
             this.NameTB.Size = new System.Drawing.Size(232, 22);
             this.NameTB.TabIndex = 4;
             this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
-            // 
-            // frakTB
-            // 
-            this.frakTB.Location = new System.Drawing.Point(182, 176);
-            this.frakTB.Name = "frakTB";
-            this.frakTB.Size = new System.Drawing.Size(232, 22);
-            this.frakTB.TabIndex = 7;
-            this.frakTB.TextChanged += new System.EventHandler(this.frakTB_TextChanged);
             // 
             // Savebutton
             // 
@@ -162,17 +154,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // frakCB
+            // 
+            this.frakCB.FormattingEnabled = true;
+            this.frakCB.Items.AddRange(new object[] {
+            "Общество душ",
+            "Уэко Мундо",
+            "Мир людей",
+            "Он сам",
+            "Готей 13"});
+            this.frakCB.Location = new System.Drawing.Point(182, 176);
+            this.frakCB.Name = "frakCB";
+            this.frakCB.Size = new System.Drawing.Size(232, 24);
+            this.frakCB.TabIndex = 13;
+            // 
             // AddcharForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.frakCB);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusCB);
             this.Controls.Add(this.rasaCB);
             this.Controls.Add(this.Savebutton);
-            this.Controls.Add(this.frakTB);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.fraklabel);
             this.Controls.Add(this.statuslabel);
@@ -194,12 +200,12 @@
         private System.Windows.Forms.Label statuslabel;
         private System.Windows.Forms.Label fraklabel;
         private System.Windows.Forms.TextBox NameTB;
-        private System.Windows.Forms.TextBox frakTB;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.ComboBox rasaCB;
         private System.Windows.Forms.ComboBox statusCB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox frakCB;
     }
 }

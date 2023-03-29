@@ -36,7 +36,7 @@ namespace Anime
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            if(NameTB.Text == "")
+            if (NameTB.Text == "")
             {
                 MessageBox.Show("Заполните поля");
                 return;
@@ -46,7 +46,7 @@ namespace Anime
                  NameTB.Text + ", " +
                  rasaCB.Text + ", " +
                  statusCB.Text + ", " +
-                 frakTB.Text);
+                 frakCB.Text);
 
             if (filename != "")
             {
@@ -67,6 +67,7 @@ namespace Anime
 
         }
         string filename = "";
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(openFileDialog1.ShowDialog() == DialogResult.OK)

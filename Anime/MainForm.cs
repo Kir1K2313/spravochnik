@@ -66,8 +66,14 @@ namespace Anime
         private void добавитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddcharForm addchar = new AddcharForm();
-            addchar.Show();
+            addchar.ShowDialog();
             MainForm_Load_1(null, null);
+        }
+
+        private void helpbutton_Click(object sender, EventArgs e)
+        {
+            HelpForm hf = new HelpForm();
+            hf.ShowDialog();
         }
     }
 }
