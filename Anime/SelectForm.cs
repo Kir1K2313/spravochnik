@@ -115,7 +115,10 @@ namespace Anime
                 {
 
                 }
-            
-         
+
+        private void SelectForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

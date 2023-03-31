@@ -26,3 +26,4 @@ D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.filte
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.SelectForm.resources
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.AddcharForm.resources
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.HelpForm.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.DeletecharForm.resources

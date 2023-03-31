@@ -39,6 +39,7 @@
             this.AddcharcontextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpbutton = new System.Windows.Forms.Button();
+            this.удалитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -115,14 +116,15 @@
             // 
             this.AddcharcontextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.AddcharcontextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.добавитьГерояToolStripMenuItem});
+            this.добавитьГерояToolStripMenuItem,
+            this.удалитьГерояToolStripMenuItem});
             this.AddcharcontextMenuStrip1.Name = "contextMenuStrip1";
-            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(190, 28);
+            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             // 
             // добавитьГерояToolStripMenuItem
             // 
             this.добавитьГерояToolStripMenuItem.Name = "добавитьГерояToolStripMenuItem";
-            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.добавитьГерояToolStripMenuItem.Text = "Добавить героя";
             this.добавитьГерояToolStripMenuItem.Click += new System.EventHandler(this.добавитьГерояToolStripMenuItem_Click);
             // 
@@ -136,6 +138,13 @@
             this.helpbutton.Text = "Помощь";
             this.helpbutton.UseVisualStyleBackColor = true;
             this.helpbutton.Click += new System.EventHandler(this.helpbutton_Click);
+            // 
+            // удалитьГерояToolStripMenuItem
+            // 
+            this.удалитьГерояToolStripMenuItem.Name = "удалитьГерояToolStripMenuItem";
+            this.удалитьГерояToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.удалитьГерояToolStripMenuItem.Text = "Удалить героя";
+            this.удалитьГерояToolStripMenuItem.Click += new System.EventHandler(this.удалитьГерояToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -174,6 +183,7 @@
         private System.Windows.Forms.ContextMenuStrip AddcharcontextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem добавитьГерояToolStripMenuItem;
         private System.Windows.Forms.Button helpbutton;
+        private System.Windows.Forms.ToolStripMenuItem удалитьГерояToolStripMenuItem;
     }
 }
 

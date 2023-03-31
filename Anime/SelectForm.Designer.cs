@@ -33,13 +33,14 @@ namespace Anime
         {
             this.SuspendLayout();
             // 
-            // basket
+            // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 542);
-            this.Name = "basket";
+            this.Name = "SelectForm";
             this.Text = "Корзина";
+            this.Load += new System.EventHandler(this.SelectForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -42,11 +42,11 @@ namespace Anime
                 return;
             }
             File.AppendAllText("characters.txt",
-                 Environment.NewLine +
                  NameTB.Text + ", " +
                  rasaCB.Text + ", " +
                  statusCB.Text + ", " +
-                 frakCB.Text);
+                 frakCB.Text +", " +
+                 Environment.NewLine);
 
             if (filename != "")
             {

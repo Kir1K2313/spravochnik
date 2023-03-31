@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.frakCB = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             // 
             this.Namelabel.AutoSize = true;
             this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Namelabel.Location = new System.Drawing.Point(53, 27);
+            this.Namelabel.Location = new System.Drawing.Point(58, 95);
             this.Namelabel.Name = "Namelabel";
             this.Namelabel.Size = new System.Drawing.Size(99, 25);
             this.Namelabel.TabIndex = 0;
@@ -57,7 +58,7 @@
             // 
             this.rasalabel.AutoSize = true;
             this.rasalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rasalabel.Location = new System.Drawing.Point(79, 77);
+            this.rasalabel.Location = new System.Drawing.Point(84, 129);
             this.rasalabel.Name = "rasalabel";
             this.rasalabel.Size = new System.Drawing.Size(54, 25);
             this.rasalabel.TabIndex = 1;
@@ -67,7 +68,7 @@
             // 
             this.statuslabel.AutoSize = true;
             this.statuslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statuslabel.Location = new System.Drawing.Point(65, 123);
+            this.statuslabel.Location = new System.Drawing.Point(79, 170);
             this.statuslabel.Name = "statuslabel";
             this.statuslabel.Size = new System.Drawing.Size(78, 25);
             this.statuslabel.TabIndex = 2;
@@ -78,7 +79,7 @@
             // 
             this.fraklabel.AutoSize = true;
             this.fraklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fraklabel.Location = new System.Drawing.Point(56, 172);
+            this.fraklabel.Location = new System.Drawing.Point(61, 223);
             this.fraklabel.Name = "fraklabel";
             this.fraklabel.Size = new System.Drawing.Size(96, 25);
             this.fraklabel.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             // NameTB
             // 
-            this.NameTB.Location = new System.Drawing.Point(182, 31);
+            this.NameTB.Location = new System.Drawing.Point(187, 99);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(232, 22);
             this.NameTB.TabIndex = 4;
@@ -112,7 +113,7 @@
             "Арранкар",
             "Душа",
             "Человек"});
-            this.rasaCB.Location = new System.Drawing.Point(182, 81);
+            this.rasaCB.Location = new System.Drawing.Point(187, 133);
             this.rasaCB.Name = "rasaCB";
             this.rasaCB.Size = new System.Drawing.Size(232, 24);
             this.rasaCB.TabIndex = 9;
@@ -125,7 +126,7 @@
             "Живой ",
             "Мертвый",
             "Неизвестно"});
-            this.statusCB.Location = new System.Drawing.Point(182, 127);
+            this.statusCB.Location = new System.Drawing.Point(187, 174);
             this.statusCB.Name = "statusCB";
             this.statusCB.Size = new System.Drawing.Size(232, 24);
             this.statusCB.TabIndex = 10;
@@ -142,7 +143,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(130, 226);
+            this.button1.Location = new System.Drawing.Point(128, 305);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 68);
             this.button1.TabIndex = 12;
@@ -163,16 +164,27 @@
             "Мир людей",
             "Он сам",
             "Готей 13"});
-            this.frakCB.Location = new System.Drawing.Point(182, 176);
+            this.frakCB.Location = new System.Drawing.Point(187, 227);
             this.frakCB.Name = "frakCB";
             this.frakCB.Size = new System.Drawing.Size(232, 24);
             this.frakCB.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(43, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Добавление персонажа";
             // 
             // AddcharForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.frakCB);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox frakCB;
+        private System.Windows.Forms.Label label1;
     }
 }

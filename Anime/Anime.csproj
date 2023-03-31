@@ -52,6 +52,12 @@
     <Compile Include="AddcharForm.Designer.cs">
       <DependentUpon>AddcharForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DeletecharForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletecharForm.Designer.cs">
+      <DependentUpon>DeletecharForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddcharForm.resx">
       <DependentUpon>AddcharForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletecharForm.resx">
+      <DependentUpon>DeletecharForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>

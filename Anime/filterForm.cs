@@ -46,20 +46,20 @@ namespace Anime
             InitializeComponent();
 
             int x = 40;
-            int y = 200;
+            int y = 10;
             for(int i=0; i < characters_list.Count; i++)
             {
                 characters_list[i].btn.Font = new Font("Microsoft Sans Serif", 12F);
                 characters_list[i].btn.Location = new Point(x, y);
                 characters_list[i].btn.Size = new Size(150, 30);
                 characters_list[i].btn.Click += new EventHandler(charactersClick);
-                Controls.Add(characters_list[i].btn);
+                charpanel.Controls.Add(characters_list[i].btn);
 
 
                 characters_list[i].pb.Location = new Point(x, y);
                 characters_list[i].pb.Size = new Size(200, 150);
                 characters_list[i].pb.SizeMode = PictureBoxSizeMode.Zoom;
-                Controls.Add(characters_list[i].pb);
+                charpanel.Controls.Add(characters_list[i].pb);
                     x += 210;
                     if (x > 620)
                     {
@@ -77,7 +77,7 @@ namespace Anime
         private void Findbutton_Click(object sender, EventArgs e)
         {
             int x = 40;
-            int y = 200;
+            int y = 10;
 
             for(int i=0; i < characters_list.Count; i++)
             {
@@ -154,5 +154,9 @@ namespace Anime
             }
         }
 
+        private void filterpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

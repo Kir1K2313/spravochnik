@@ -57,7 +57,7 @@ namespace Anime
            }
 
         }
-
+       
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
@@ -74,6 +74,13 @@ namespace Anime
         {
             HelpForm hf = new HelpForm();
             hf.ShowDialog();
+        }
+
+        private void удалитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeletecharForm deletechar = new DeletecharForm();
+            deletechar.ShowDialog();
+            MainForm_Load_1(null, null);
         }
     }
 }
