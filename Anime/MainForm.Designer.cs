@@ -38,8 +38,9 @@
             this.Selectbutton = new System.Windows.Forms.Button();
             this.AddcharcontextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.добавитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpbutton = new System.Windows.Forms.Button();
             this.удалитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -119,14 +120,21 @@
             this.добавитьГерояToolStripMenuItem,
             this.удалитьГерояToolStripMenuItem});
             this.AddcharcontextMenuStrip1.Name = "contextMenuStrip1";
-            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.AddcharcontextMenuStrip1.Size = new System.Drawing.Size(190, 52);
             // 
             // добавитьГерояToolStripMenuItem
             // 
             this.добавитьГерояToolStripMenuItem.Name = "добавитьГерояToolStripMenuItem";
-            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.добавитьГерояToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
             this.добавитьГерояToolStripMenuItem.Text = "Добавить героя";
             this.добавитьГерояToolStripMenuItem.Click += new System.EventHandler(this.добавитьГерояToolStripMenuItem_Click);
+            // 
+            // удалитьГерояToolStripMenuItem
+            // 
+            this.удалитьГерояToolStripMenuItem.Name = "удалитьГерояToolStripMenuItem";
+            this.удалитьГерояToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.удалитьГерояToolStripMenuItem.Text = "Удалить героя";
+            this.удалитьГерояToolStripMenuItem.Click += new System.EventHandler(this.удалитьГерояToolStripMenuItem_Click);
             // 
             // helpbutton
             // 
@@ -139,12 +147,16 @@
             this.helpbutton.UseVisualStyleBackColor = true;
             this.helpbutton.Click += new System.EventHandler(this.helpbutton_Click);
             // 
-            // удалитьГерояToolStripMenuItem
+            // button1
             // 
-            this.удалитьГерояToolStripMenuItem.Name = "удалитьГерояToolStripMenuItem";
-            this.удалитьГерояToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.удалитьГерояToolStripMenuItem.Text = "Удалить героя";
-            this.удалитьГерояToolStripMenuItem.Click += new System.EventHandler(this.удалитьГерояToolStripMenuItem_Click);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(868, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(157, 53);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Войти";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -154,6 +166,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1125, 793);
             this.ContextMenuStrip = this.AddcharcontextMenuStrip1;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.helpbutton);
             this.Controls.Add(this.Selectbutton);
             this.Controls.Add(this.pictureBox8);
@@ -184,6 +197,7 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьГерояToolStripMenuItem;
         private System.Windows.Forms.Button helpbutton;
         private System.Windows.Forms.ToolStripMenuItem удалитьГерояToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

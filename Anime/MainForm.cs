@@ -47,6 +47,7 @@ namespace Anime
 
         private void MainForm_Load_1(object sender, EventArgs e)
         {
+            filterForm.characters_list.Clear();
            string[] strs = File.ReadAllLines("characters.txt");
 
            foreach (string str in strs)
@@ -81,6 +82,12 @@ namespace Anime
             DeletecharForm deletechar = new DeletecharForm();
             deletechar.ShowDialog();
             MainForm_Load_1(null, null);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AuthForm auth = new AuthForm();
+            auth.ShowDialog();
         }
     }
 }
