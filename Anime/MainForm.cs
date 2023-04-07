@@ -66,8 +66,15 @@ namespace Anime
 
         private void добавитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddcharForm addchar = new AddcharForm();
-            addchar.ShowDialog();
+            if(AuthForm.Admin)
+            {
+                AddcharForm addchar = new AddcharForm();
+                addchar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Изменения может проводить только администатор");
+            }
             MainForm_Load_1(null, null);
         }
 
@@ -79,15 +86,42 @@ namespace Anime
 
         private void удалитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeletecharForm deletechar = new DeletecharForm();
-            deletechar.ShowDialog();
+            if (AuthForm.Admin)
+            {
+                DeletecharForm deletechar = new DeletecharForm();
+                deletechar.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Изменения может проводить только администатор");
+            }
+        
             MainForm_Load_1(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AuthForm auth = new AuthForm();
-            auth.ShowDialog();
+            if (AuthForm.name == "")
+            {
+                button1.Text = "Войти";
+                AuthForm auth = new AuthForm();
+                auth.ShowDialog();
+            }
+            else
+            {
+                AuthForm.name = "";
+            }
+            if (AuthForm.name == "")
+            {
+                UserLabel.Text = "";
+                button1.Text = "Войти";
+            }
+            else
+            {
+                UserLabel.Text = "Добро пожаловать  " + AuthForm.name + " " + AuthForm.secondname;
+                button1.Text = "Выйти";
+            }
+
         }
     }
 }

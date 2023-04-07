@@ -41,6 +41,7 @@
             this.удалитьГерояToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.UserLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -158,6 +159,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // UserLabel
+            // 
+            this.UserLabel.AutoSize = true;
+            this.UserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.UserLabel.Location = new System.Drawing.Point(466, 9);
+            this.UserLabel.Name = "UserLabel";
+            this.UserLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.UserLabel.Size = new System.Drawing.Size(0, 25);
+            this.UserLabel.TabIndex = 22;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,6 +177,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1125, 793);
             this.ContextMenuStrip = this.AddcharcontextMenuStrip1;
+            this.Controls.Add(this.UserLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.helpbutton);
             this.Controls.Add(this.Selectbutton);
@@ -183,6 +195,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.AddcharcontextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,6 +211,7 @@
         private System.Windows.Forms.Button helpbutton;
         private System.Windows.Forms.ToolStripMenuItem удалитьГерояToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label UserLabel;
     }
 }
 

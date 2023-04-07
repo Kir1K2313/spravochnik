@@ -8,5 +8,3 @@
 Улькиорра Сифер, Арранкар, Мертвый, Уэко Мундо
 Урю Исида, Квинси, Живой, Мир людей
 Бьякуя Кучики, Шинигами, Живой, Общество душ
-System.Windows.Forms.TextBox, Text: kirill, System.Windows.Forms.TextBox, Text: burenin, System.Windows.Forms.TextBox, Text: 1234567, System.Windows.Forms.TextBox, Text: 123, System.Windows.Forms.TextBox, Text: 123, 
-System.Windows.Forms.TextBox, Text: r, System.Windows.Forms.TextBox, Text: r, System.Windows.Forms.TextBox, Text: 34, System.Windows.Forms.TextBox, Text: 123, System.Windows.Forms.TextBox, Text: 12, 

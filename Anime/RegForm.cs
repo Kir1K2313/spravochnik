@@ -27,12 +27,11 @@ namespace Anime
         {
             if(PasTB.Text == Pas2TB.Text)
             {
-                File.AppendAllText("characters.txt",
-                              NameTB + ", " +
-                              SecondNameTB + ", " +
-                              LoginTB + ", " +
-                              PasTB + ", " +
-                              Pas2TB + ", " +
+                File.AppendAllText("users.txt",
+                              NameTB.Text + ", " +
+                              SecondNameTB.Text + ", " +
+                              LoginTB.Text + ", " +
+                              PasTB.Text + ", 0 " +
                               Environment.NewLine);
                 MessageBox.Show("Регистрация успешно завершена!");
                 Close();
