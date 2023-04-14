@@ -50,5 +50,10 @@ namespace Anime
         {
 
         }
+
+        private void PastTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

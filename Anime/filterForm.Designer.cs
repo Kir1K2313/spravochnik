@@ -42,6 +42,7 @@
             this.namecheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.filterpanel = new System.Windows.Forms.Panel();
             this.charpanel = new System.Windows.Forms.Panel();
+            this.Hidebutton = new System.Windows.Forms.Button();
             this.filterpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +60,10 @@
             // Раса
             // 
             this.Раса.AutoSize = true;
-            this.Раса.Location = new System.Drawing.Point(37, 60);
+            this.Раса.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Раса.Location = new System.Drawing.Point(12, 99);
             this.Раса.Name = "Раса";
-            this.Раса.Size = new System.Drawing.Size(39, 16);
+            this.Раса.Size = new System.Drawing.Size(54, 25);
             this.Раса.TabIndex = 11;
             this.Раса.Text = "Раса";
             this.Раса.Click += new System.EventHandler(this.label1_Click);
@@ -69,18 +71,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 99);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
+            this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Статус";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 138);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(-5, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 14;
             this.label3.Text = "Фракция";
             // 
@@ -93,7 +97,7 @@
             "Душа",
             "Квинси",
             "Арранкар"});
-            this.rasaCombobox.Location = new System.Drawing.Point(89, 57);
+            this.rasaCombobox.Location = new System.Drawing.Point(104, 99);
             this.rasaCombobox.Name = "rasaCombobox";
             this.rasaCombobox.Size = new System.Drawing.Size(124, 24);
             this.rasaCombobox.TabIndex = 15;
@@ -101,9 +105,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 29);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(12, 67);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 16);
+            this.label4.Size = new System.Drawing.Size(54, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Имя";
             // 
@@ -126,7 +131,7 @@
             "Живой ",
             "Неизвестно",
             "Мертвый"});
-            this.statusComboBox.Location = new System.Drawing.Point(94, 96);
+            this.statusComboBox.Location = new System.Drawing.Point(104, 129);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(121, 24);
             this.statusComboBox.TabIndex = 18;
@@ -139,7 +144,7 @@
             "Общество душ",
             "Уэко Мундо",
             "Готей 13"});
-            this.mirComboBox.Location = new System.Drawing.Point(93, 138);
+            this.mirComboBox.Location = new System.Drawing.Point(105, 156);
             this.mirComboBox.Name = "mirComboBox";
             this.mirComboBox.Size = new System.Drawing.Size(120, 24);
             this.mirComboBox.TabIndex = 19;
@@ -155,10 +160,11 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 26);
+            this.textBox1.Location = new System.Drawing.Point(105, 71);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 22);
             this.textBox1.TabIndex = 21;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // namecheckedListBox
             // 
@@ -173,7 +179,7 @@
             "Хирако Шинджи",
             "Ямамото Генрюсай",
             "Урю Исида"});
-            this.namecheckedListBox.Location = new System.Drawing.Point(389, 34);
+            this.namecheckedListBox.Location = new System.Drawing.Point(392, 34);
             this.namecheckedListBox.Name = "namecheckedListBox";
             this.namecheckedListBox.Size = new System.Drawing.Size(150, 89);
             this.namecheckedListBox.TabIndex = 22;
@@ -181,6 +187,7 @@
             // 
             // filterpanel
             // 
+            this.filterpanel.Controls.Add(this.Hidebutton);
             this.filterpanel.Controls.Add(this.label4);
             this.filterpanel.Controls.Add(this.namecheckedListBox);
             this.filterpanel.Controls.Add(this.Findbutton);
@@ -193,19 +200,34 @@
             this.filterpanel.Controls.Add(this.statusComboBox);
             this.filterpanel.Controls.Add(this.rasaCombobox);
             this.filterpanel.Controls.Add(this.NameCombobox);
-            this.filterpanel.Location = new System.Drawing.Point(3, 2);
+            this.filterpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filterpanel.Location = new System.Drawing.Point(0, 0);
             this.filterpanel.Name = "filterpanel";
-            this.filterpanel.Size = new System.Drawing.Size(1061, 183);
+            this.filterpanel.Size = new System.Drawing.Size(1070, 183);
             this.filterpanel.TabIndex = 23;
             this.filterpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.filterpanel_Paint);
             // 
             // charpanel
             // 
             this.charpanel.AutoScroll = true;
-            this.charpanel.Location = new System.Drawing.Point(3, 191);
+            this.charpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.charpanel.Location = new System.Drawing.Point(0, 183);
             this.charpanel.Name = "charpanel";
-            this.charpanel.Size = new System.Drawing.Size(1061, 360);
+            this.charpanel.Size = new System.Drawing.Size(1070, 380);
             this.charpanel.TabIndex = 23;
+            this.charpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.charpanel_Paint);
+            this.charpanel.Resize += new System.EventHandler(this.charpanel_Resize);
+            // 
+            // Hidebutton
+            // 
+            this.Hidebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Hidebutton.Location = new System.Drawing.Point(17, 3);
+            this.Hidebutton.Name = "Hidebutton";
+            this.Hidebutton.Size = new System.Drawing.Size(170, 29);
+            this.Hidebutton.TabIndex = 23;
+            this.Hidebutton.Text = "Скрыть панель";
+            this.Hidebutton.UseVisualStyleBackColor = true;
+            this.Hidebutton.Click += new System.EventHandler(this.Hidebutton_Click);
             // 
             // filterForm
             // 
@@ -239,5 +261,6 @@
         private System.Windows.Forms.CheckedListBox namecheckedListBox;
         private System.Windows.Forms.Panel filterpanel;
         private System.Windows.Forms.Panel charpanel;
+        private System.Windows.Forms.Button Hidebutton;
     }
 }

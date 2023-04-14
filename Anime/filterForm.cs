@@ -61,8 +61,8 @@ namespace Anime
                 characters_list[i].pb.SizeMode = PictureBoxSizeMode.Zoom;
                 charpanel.Controls.Add(characters_list[i].pb);
                     x += 210;
-                    if (x > 620)
-                    {
+                    if (x + 200 > charpanel.Width)
+                    { 
                         x = 40;
                         y += 210;
                     }
@@ -114,7 +114,7 @@ namespace Anime
                     characters_list[i].btn.Location = new Point(x, y);
                     characters_list[i].pb.Location = new Point(x, y);
                     x += 210;
-                    if (x > 620)
+                    if (x + 200  > charpanel.Width) 
                     {
                         x = 40;
                         y += 210;
@@ -131,14 +131,10 @@ namespace Anime
                 if (((Button)sender).Text == characters_list[i].btn.Text)
                 {
                     Characters characters = new Characters(characters_list[i]);
-                    characters.Show();
+                    characters.ShowDialog();
                 }
             }
         }
-
-
-
-
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -156,6 +152,36 @@ namespace Anime
 
         private void filterpanel_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void charpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void charpanel_Resize(object sender, EventArgs e)
+        {
+            Findbutton_Click(null, null);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void Hidebutton_Click(object sender, EventArgs e)
+        {
+            if(Hidebutton.Text == "Скрыть фильтр")
+            {
+                filterpanel.Height = 30;
+                Hidebutton.Text = "Раскрыть фильтр";
+            }
+           else if (Hidebutton.Text == "Раскрыть фильтр")
+            {
+                filterpanel.Height = 183;
+                Hidebutton.Text = "Скрыть фильтр";
+            }
 
         }
     }

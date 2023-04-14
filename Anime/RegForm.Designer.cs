@@ -114,6 +114,7 @@
             this.PasTB.Location = new System.Drawing.Point(31, 424);
             this.PasTB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PasTB.Name = "PasTB";
+            this.PasTB.PasswordChar = '*';
             this.PasTB.Size = new System.Drawing.Size(342, 30);
             this.PasTB.TabIndex = 8;
             // 
@@ -132,6 +133,7 @@
             this.Pas2TB.Location = new System.Drawing.Point(31, 527);
             this.Pas2TB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Pas2TB.Name = "Pas2TB";
+            this.Pas2TB.PasswordChar = '*';
             this.Pas2TB.Size = new System.Drawing.Size(342, 30);
             this.Pas2TB.TabIndex = 10;
             // 

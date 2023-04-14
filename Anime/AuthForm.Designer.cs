@@ -70,8 +70,10 @@
             // 
             this.PastTB.Location = new System.Drawing.Point(30, 142);
             this.PastTB.Name = "PastTB";
+            this.PastTB.PasswordChar = '*';
             this.PastTB.Size = new System.Drawing.Size(213, 22);
             this.PastTB.TabIndex = 4;
+            this.PastTB.TextChanged += new System.EventHandler(this.PastTB_TextChanged);
             // 
             // label2
             // 

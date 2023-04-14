@@ -18,7 +18,6 @@ namespace Anime
         public Characters(charactersstruct _characters)
         {
             InitializeComponent();
-
             characters = _characters;
 
             Text = characters.Name;

@@ -25,6 +25,12 @@ namespace Anime
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (NameTB.Text == "" || SecondNameTB.Text == ""
+                || LoginTB.Text == "" || PasTB.Text == "" || Pas2TB.Text == "" )
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
+            else
             if(PasTB.Text == Pas2TB.Text)
             {
                 File.AppendAllText("users.txt",
