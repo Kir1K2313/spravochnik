@@ -172,15 +172,15 @@ namespace Anime
         
         private void Hidebutton_Click(object sender, EventArgs e)
         {
-            if(Hidebutton.Text == "Скрыть фильтр")
+            if(Hidebutton.Text == "Скрыть панель")
             {
                 filterpanel.Height = 30;
-                Hidebutton.Text = "Раскрыть фильтр";
+                Hidebutton.Text = "Раскрыть панель";
             }
-           else if (Hidebutton.Text == "Раскрыть фильтр")
+           else if (Hidebutton.Text == "Раскрыть панель")
             {
                 filterpanel.Height = 183;
-                Hidebutton.Text = "Скрыть фильтр";
+                Hidebutton.Text = "Скрыть панель";
             }
 
         }

@@ -41,8 +41,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.namecheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.filterpanel = new System.Windows.Forms.Panel();
-            this.charpanel = new System.Windows.Forms.Panel();
             this.Hidebutton = new System.Windows.Forms.Button();
+            this.charpanel = new System.Windows.Forms.Panel();
             this.filterpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,6 +207,17 @@
             this.filterpanel.TabIndex = 23;
             this.filterpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.filterpanel_Paint);
             // 
+            // Hidebutton
+            // 
+            this.Hidebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Hidebutton.Location = new System.Drawing.Point(17, 7);
+            this.Hidebutton.Name = "Hidebutton";
+            this.Hidebutton.Size = new System.Drawing.Size(169, 32);
+            this.Hidebutton.TabIndex = 23;
+            this.Hidebutton.Text = "Скрыть панель";
+            this.Hidebutton.UseVisualStyleBackColor = true;
+            this.Hidebutton.Click += new System.EventHandler(this.Hidebutton_Click);
+            // 
             // charpanel
             // 
             this.charpanel.AutoScroll = true;
@@ -217,17 +228,6 @@
             this.charpanel.TabIndex = 23;
             this.charpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.charpanel_Paint);
             this.charpanel.Resize += new System.EventHandler(this.charpanel_Resize);
-            // 
-            // Hidebutton
-            // 
-            this.Hidebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Hidebutton.Location = new System.Drawing.Point(17, 3);
-            this.Hidebutton.Name = "Hidebutton";
-            this.Hidebutton.Size = new System.Drawing.Size(170, 29);
-            this.Hidebutton.TabIndex = 23;
-            this.Hidebutton.Text = "Скрыть панель";
-            this.Hidebutton.UseVisualStyleBackColor = true;
-            this.Hidebutton.Click += new System.EventHandler(this.Hidebutton_Click);
             // 
             // filterForm
             // 
