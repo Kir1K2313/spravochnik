@@ -42,6 +42,7 @@
             this.helpbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.UserLabel = new System.Windows.Forms.Label();
+            this.Feedbackbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -140,7 +141,7 @@
             // helpbutton
             // 
             this.helpbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.helpbutton.Location = new System.Drawing.Point(447, 521);
+            this.helpbutton.Location = new System.Drawing.Point(447, 396);
             this.helpbutton.Name = "helpbutton";
             this.helpbutton.Size = new System.Drawing.Size(160, 44);
             this.helpbutton.TabIndex = 20;
@@ -169,6 +170,17 @@
             this.UserLabel.Size = new System.Drawing.Size(0, 25);
             this.UserLabel.TabIndex = 22;
             // 
+            // Feedbackbutton
+            // 
+            this.Feedbackbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Feedbackbutton.Location = new System.Drawing.Point(865, 652);
+            this.Feedbackbutton.Name = "Feedbackbutton";
+            this.Feedbackbutton.Size = new System.Drawing.Size(160, 63);
+            this.Feedbackbutton.TabIndex = 23;
+            this.Feedbackbutton.Text = "техническая поддержка";
+            this.Feedbackbutton.UseVisualStyleBackColor = true;
+            this.Feedbackbutton.Click += new System.EventHandler(this.Feedbackbutton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,6 +189,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1125, 793);
             this.ContextMenuStrip = this.AddcharcontextMenuStrip1;
+            this.Controls.Add(this.Feedbackbutton);
             this.Controls.Add(this.UserLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.helpbutton);
@@ -212,6 +225,7 @@
         private System.Windows.Forms.ToolStripMenuItem удалитьГерояToolStripMenuItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label UserLabel;
+        private System.Windows.Forms.Button Feedbackbutton;
     }
 }
 

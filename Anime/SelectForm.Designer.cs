@@ -31,13 +31,26 @@ namespace Anime
         /// </summary>
         private void InitializeComponent()
         {
+            this.Sendbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // Sendbutton
+            // 
+            this.Sendbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Sendbutton.Location = new System.Drawing.Point(686, 466);
+            this.Sendbutton.Name = "Sendbutton";
+            this.Sendbutton.Size = new System.Drawing.Size(233, 49);
+            this.Sendbutton.TabIndex = 0;
+            this.Sendbutton.Text = "Отправить на Email";
+            this.Sendbutton.UseVisualStyleBackColor = true;
+            this.Sendbutton.Click += new System.EventHandler(this.Sendbutton_Click);
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 542);
+            this.Controls.Add(this.Sendbutton);
             this.Name = "SelectForm";
             this.Text = "Корзина";
             this.Load += new System.EventHandler(this.SelectForm_Load);
@@ -46,5 +59,7 @@ namespace Anime
         }
 
         #endregion
+
+        private System.Windows.Forms.Button Sendbutton;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Namelabel = new System.Windows.Forms.Label();
             this.rasalabel = new System.Windows.Forms.Label();
             this.statuslabel = new System.Windows.Forms.Label();
@@ -41,6 +42,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.frakCB = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +52,7 @@
             // 
             this.Namelabel.AutoSize = true;
             this.Namelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Namelabel.Location = new System.Drawing.Point(58, 95);
+            this.Namelabel.Location = new System.Drawing.Point(76, 131);
             this.Namelabel.Name = "Namelabel";
             this.Namelabel.Size = new System.Drawing.Size(99, 25);
             this.Namelabel.TabIndex = 0;
@@ -58,7 +62,7 @@
             // 
             this.rasalabel.AutoSize = true;
             this.rasalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rasalabel.Location = new System.Drawing.Point(84, 129);
+            this.rasalabel.Location = new System.Drawing.Point(76, 159);
             this.rasalabel.Name = "rasalabel";
             this.rasalabel.Size = new System.Drawing.Size(54, 25);
             this.rasalabel.TabIndex = 1;
@@ -68,7 +72,7 @@
             // 
             this.statuslabel.AutoSize = true;
             this.statuslabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statuslabel.Location = new System.Drawing.Point(79, 170);
+            this.statuslabel.Location = new System.Drawing.Point(76, 187);
             this.statuslabel.Name = "statuslabel";
             this.statuslabel.Size = new System.Drawing.Size(78, 25);
             this.statuslabel.TabIndex = 2;
@@ -79,7 +83,7 @@
             // 
             this.fraklabel.AutoSize = true;
             this.fraklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fraklabel.Location = new System.Drawing.Point(61, 223);
+            this.fraklabel.Location = new System.Drawing.Point(76, 219);
             this.fraklabel.Name = "fraklabel";
             this.fraklabel.Size = new System.Drawing.Size(96, 25);
             this.fraklabel.TabIndex = 3;
@@ -87,7 +91,7 @@
             // 
             // NameTB
             // 
-            this.NameTB.Location = new System.Drawing.Point(187, 99);
+            this.NameTB.Location = new System.Drawing.Point(187, 135);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(232, 22);
             this.NameTB.TabIndex = 4;
@@ -113,7 +117,7 @@
             "Арранкар",
             "Душа",
             "Человек"});
-            this.rasaCB.Location = new System.Drawing.Point(187, 133);
+            this.rasaCB.Location = new System.Drawing.Point(187, 163);
             this.rasaCB.Name = "rasaCB";
             this.rasaCB.Size = new System.Drawing.Size(232, 24);
             this.rasaCB.TabIndex = 9;
@@ -126,16 +130,16 @@
             "Живой ",
             "Мертвый",
             "Неизвестно"});
-            this.statusCB.Location = new System.Drawing.Point(187, 174);
+            this.statusCB.Location = new System.Drawing.Point(187, 193);
             this.statusCB.Name = "statusCB";
             this.statusCB.Size = new System.Drawing.Size(232, 24);
             this.statusCB.TabIndex = 10;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(443, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(433, 163);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 396);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 275);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -164,7 +168,7 @@
             "Мир людей",
             "Он сам",
             "Готей 13"});
-            this.frakCB.Location = new System.Drawing.Point(187, 227);
+            this.frakCB.Location = new System.Drawing.Point(187, 223);
             this.frakCB.Name = "frakCB";
             this.frakCB.Size = new System.Drawing.Size(232, 24);
             this.frakCB.TabIndex = 13;
@@ -179,11 +183,38 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Добавление персонажа";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(750, 68);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(355, 370);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(763, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(218, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Добавление описания";
+            // 
             // AddcharForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1140, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.frakCB);
             this.Controls.Add(this.button1);
@@ -220,5 +251,8 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox frakCB;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label2;
     }
 }

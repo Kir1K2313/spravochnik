@@ -25,6 +25,10 @@ namespace Anime
             try 
             { 
                 pictureBox1.Load("../../Pictures/" + characters.Name + ".jpg");
+            }
+            catch (Exception) { }
+            try
+            {
                 textBox1.Text = File.ReadAllText("../../Pictures/" + characters.Name + ".txt");
             }
             catch (Exception) { }

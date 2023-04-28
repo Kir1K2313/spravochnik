@@ -22,6 +22,7 @@ namespace Anime
         void ReDraw()
         {
             Controls.Clear();
+            Controls.Add(Sendbutton);
             int x = 10;
             int y = 10;
 
@@ -119,6 +120,12 @@ namespace Anime
         private void SelectForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Sendbutton_Click(object sender, EventArgs e)
+        {
+            SendMailForm mailForm = new SendMailForm();
+            mailForm.ShowDialog();
         }
     }
 }

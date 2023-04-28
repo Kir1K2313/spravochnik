@@ -29,3 +29,5 @@ D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.HelpF
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.DeletecharForm.resources
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.AuthForm.resources
 D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.RegForm.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.FeedbackForm.resources
+D:\Буренин Кирилл\справочник1\Anime\obj\Debug\Anime.SendMailForm.resources

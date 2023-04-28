@@ -48,6 +48,9 @@ namespace Anime
                  frakCB.Text +", " +
                  Environment.NewLine);
 
+            string info = "../../Pictures/" + NameTB.Text + ".txt";
+            File.AppendAllText(info, textBox1.Text);
+
             if (filename != "")
             {
                 File.Copy(filename, "../../Pictures/" + NameTB.Text + ".jpg");
@@ -55,6 +58,7 @@ namespace Anime
 
             MessageBox.Show("Сохранено успешно");
             Close();
+
         }
 
         private void rasaCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +79,11 @@ namespace Anime
                 filename = openFileDialog1.FileName;
                 pictureBox1.Load(filename);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

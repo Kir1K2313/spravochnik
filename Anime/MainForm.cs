@@ -123,5 +123,11 @@ namespace Anime
             }
 
         }
+
+        private void Feedbackbutton_Click(object sender, EventArgs e)
+        {
+            FeedbackForm feedback = new FeedbackForm();
+            feedback.ShowDialog();  
+        }
     }
 }
