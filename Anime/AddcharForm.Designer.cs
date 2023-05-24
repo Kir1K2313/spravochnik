@@ -167,7 +167,8 @@
             "Уэко Мундо",
             "Мир людей",
             "Он сам",
-            "Готей 13"});
+            "Готей 13",
+            "Вандерейх"});
             this.frakCB.Location = new System.Drawing.Point(187, 223);
             this.frakCB.Name = "frakCB";
             this.frakCB.Size = new System.Drawing.Size(232, 24);

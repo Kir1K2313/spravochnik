@@ -16,13 +16,24 @@ namespace Anime
         public MainForm()
         {
             InitializeComponent();
+            Draw();
         }
+        private void Draw()
+        {
+            filterbutton.Location = new Point(this.Size.Width / 2 - filterbutton.Size.Width / 2, filterbutton.Location.Y);
+            Selectbutton.Location = new Point(filterbutton.Location.X, Selectbutton.Location.Y);
+            helpbutton.Location = new Point(filterbutton.Location.X + filterbutton.Size.Width - helpbutton.Size.Width, helpbutton.Location.Y);
+            button1.Location = new Point(this.Size.Width / 2 - button1.Size.Width / 2, button1.Location.Y);
+            UserLabel.Location = new Point(filterbutton.Location.X - 60 , filterbutton.Location.Y - 85);
+        }
+
+
 
         public void button_Click(object sender, EventArgs e)
         {
             filterForm.charactersClick(sender, e);
         }
-        
+
 
         private void filterbutton_Click(object sender, EventArgs e)
         {
@@ -37,7 +48,7 @@ namespace Anime
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
@@ -48,17 +59,17 @@ namespace Anime
         private void MainForm_Load_1(object sender, EventArgs e)
         {
             filterForm.characters_list.Clear();
-           string[] strs = File.ReadAllLines("characters.txt");
+            string[] strs = File.ReadAllLines("characters.txt");
 
-           foreach (string str in strs)
-           {
-               string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);
-               charactersstruct characters = new charactersstruct(parts[0], parts[1], parts[2], parts[3]);
-               filterForm.characters_list.Add(characters);
-           }
+            foreach (string str in strs)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                charactersstruct characters = new charactersstruct(parts[0], parts[1], parts[2], parts[3]);
+                filterForm.characters_list.Add(characters);
+            }
 
         }
-       
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
@@ -66,7 +77,7 @@ namespace Anime
 
         private void добавитьГерояToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(AuthForm.Admin)
+            if (AuthForm.Admin)
             {
                 AddcharForm addchar = new AddcharForm();
                 addchar.ShowDialog();
@@ -95,7 +106,7 @@ namespace Anime
             {
                 MessageBox.Show("Изменения может проводить только администатор");
             }
-        
+
             MainForm_Load_1(null, null);
         }
 
@@ -127,7 +138,22 @@ namespace Anime
         private void Feedbackbutton_Click(object sender, EventArgs e)
         {
             FeedbackForm feedback = new FeedbackForm();
-            feedback.ShowDialog();  
+            feedback.ShowDialog();
+        }
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            Draw();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterbutton_Click_1(object sender, EventArgs e)
+        {
+            filterForm filter = new filterForm();
+            filter.ShowDialog();
         }
     }
 }

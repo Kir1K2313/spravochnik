@@ -36,6 +36,7 @@ namespace Anime
             // 
             // Sendbutton
             // 
+            this.Sendbutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Sendbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Sendbutton.Location = new System.Drawing.Point(686, 466);
             this.Sendbutton.Name = "Sendbutton";
@@ -49,6 +50,7 @@ namespace Anime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(948, 542);
             this.Controls.Add(this.Sendbutton);
             this.Name = "SelectForm";

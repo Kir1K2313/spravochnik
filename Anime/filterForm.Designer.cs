@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rasaCombobox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.NameCombobox = new System.Windows.Forms.ComboBox();
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.mirComboBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,7 +60,7 @@
             // 
             this.Раса.AutoSize = true;
             this.Раса.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Раса.Location = new System.Drawing.Point(12, 99);
+            this.Раса.Location = new System.Drawing.Point(12, 88);
             this.Раса.Name = "Раса";
             this.Раса.Size = new System.Drawing.Size(54, 25);
             this.Раса.TabIndex = 11;
@@ -72,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(3, 130);
+            this.label2.Location = new System.Drawing.Point(3, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 25);
             this.label2.TabIndex = 13;
@@ -82,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(-5, 155);
+            this.label3.Location = new System.Drawing.Point(-5, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 14;
@@ -97,7 +96,7 @@
             "Душа",
             "Квинси",
             "Арранкар"});
-            this.rasaCombobox.Location = new System.Drawing.Point(104, 99);
+            this.rasaCombobox.Location = new System.Drawing.Point(92, 88);
             this.rasaCombobox.Name = "rasaCombobox";
             this.rasaCombobox.Size = new System.Drawing.Size(124, 24);
             this.rasaCombobox.TabIndex = 15;
@@ -106,23 +105,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 67);
+            this.label4.Location = new System.Drawing.Point(12, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Имя";
-            // 
-            // NameCombobox
-            // 
-            this.NameCombobox.FormattingEnabled = true;
-            this.NameCombobox.Items.AddRange(new object[] {
-            "Ичиго Куросаки",
-            "Киске Урахара",
-            "Рукия Кучики"});
-            this.NameCombobox.Location = new System.Drawing.Point(720, 96);
-            this.NameCombobox.Name = "NameCombobox";
-            this.NameCombobox.Size = new System.Drawing.Size(124, 24);
-            this.NameCombobox.TabIndex = 17;
             // 
             // statusComboBox
             // 
@@ -131,9 +118,9 @@
             "Живой ",
             "Неизвестно",
             "Мертвый"});
-            this.statusComboBox.Location = new System.Drawing.Point(104, 129);
+            this.statusComboBox.Location = new System.Drawing.Point(92, 125);
             this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.Size = new System.Drawing.Size(121, 24);
+            this.statusComboBox.Size = new System.Drawing.Size(125, 24);
             this.statusComboBox.TabIndex = 18;
             // 
             // mirComboBox
@@ -143,10 +130,11 @@
             "Мир людей",
             "Общество душ",
             "Уэко Мундо",
-            "Готей 13"});
-            this.mirComboBox.Location = new System.Drawing.Point(105, 156);
+            "Готей 13",
+            "Ванденрейх"});
+            this.mirComboBox.Location = new System.Drawing.Point(92, 156);
             this.mirComboBox.Name = "mirComboBox";
-            this.mirComboBox.Size = new System.Drawing.Size(120, 24);
+            this.mirComboBox.Size = new System.Drawing.Size(125, 24);
             this.mirComboBox.TabIndex = 19;
             // 
             // label5
@@ -160,7 +148,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 71);
+            this.textBox1.Location = new System.Drawing.Point(92, 59);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 22);
             this.textBox1.TabIndex = 21;
@@ -199,7 +187,6 @@
             this.filterpanel.Controls.Add(this.label3);
             this.filterpanel.Controls.Add(this.statusComboBox);
             this.filterpanel.Controls.Add(this.rasaCombobox);
-            this.filterpanel.Controls.Add(this.NameCombobox);
             this.filterpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.filterpanel.Location = new System.Drawing.Point(0, 0);
             this.filterpanel.Name = "filterpanel";
@@ -253,7 +240,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox rasaCombobox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox NameCombobox;
         private System.Windows.Forms.ComboBox statusComboBox;
         private System.Windows.Forms.ComboBox mirComboBox;
         private System.Windows.Forms.Label label5;
